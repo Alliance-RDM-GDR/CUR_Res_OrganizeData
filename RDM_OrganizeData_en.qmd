@@ -255,7 +255,7 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 100%"} 
-- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries ([(.txt, .md, .cvs)]{style="color:green;"}) describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README files]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describe their context and content{style="color:green;"}. 
+- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries ([(.txt, .md, .cvs)]{style="color:green;"}) describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README files]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describe their [context and content]{style="color:green;"}. 
 :::
 ::::
 
