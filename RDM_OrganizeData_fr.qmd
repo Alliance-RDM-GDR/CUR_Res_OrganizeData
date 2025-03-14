@@ -1,6 +1,6 @@
 ---
 title: "Traitement et organisation des données de recherche"
-subtitle: "Une introduction pour les chercheurs"
+subtitle: "un guide à l'usage des chercheurs"
 
 author: 
   - name: Daniel Manrique-Castano, Ph.D
