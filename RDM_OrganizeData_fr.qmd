@@ -1,0 +1,729 @@
+---
+title: "Traitement et organisation des données de recherche"
+subtitle: "Une introduction pour les chercheurs"
+
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+
+format: 
+  html:
+    embed-resources: true
+    mermaid:
+      theme: forest
+      
+  revealjs:
+    footer: "Traitement et organisation des données de recherche - Daniel Manrique-Castano, Ph.D"
+    logo: "images/alliance_logo.png"
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+    
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
+
+css: styles.css
+bibliography: references.bib 
+editor: source
+---
+
+# Principes pour la gestion des données de recherche
+
+## Rendre les ensembles de données compréhensibles
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+:::{style="text-align: left;font-size: 70%"}
+Les données de recherche existent sous de nombreuses formes et formats ([tableaux]{style="color:orange;"}, [images]{style="color:magenta;"}, [vidéos]{style="color:red;"}, [texte]{style="color:gray;"}).
+
+Dans tous les cas, il est essentiel que l’ensemble de données ait une [structure]{style="color:green;"} claire et soit [compréhensible]{style="color:green;"} par d'autres.
+:::
+
+::: callout-tip 
+Essayez de vous mettre à la place d’un [observateur externe]{style="color:green;"} lorsque vous structurez les données.
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center; font-size: 70%"}
+![Les autres ne comprennent généralement pas les données de recherche](images/DificultData.webp){fig-align="center" width="400" height="400"}
+:::
+::::
+:::::
+
+## Quatre principes pour organiser un ensemble de données
+
+:::{style="text-align: left;font-size: 70%"}
+1.  Utilisez des [conventions de nommage](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :
+
+-   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Jour_Condition_Marqueur.tif]{style="color:green;"}
+-   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Comptes.csv]{style="color:green;"}
+
+2.  Utilisez des [formats de fichiers appropriés, ouverts et accessibles]{style="color:green;"} [(lien)](https://osf.io/ena5p) pour améliorer l’accessibilité :
+
+-   {{< bi card-image>}} [.tif]{style="color:green;"} pour les images (préserve les métadonnées).
+-   {{< bi file-earmark-spreadsheet>}} [.csv]{style="color:green;"} pour les tableaux (format non propriétaire).
+-   {{< bi file-bar-graph-fill>}} [.png ou .svg]{style="color:green;"} pour les graphiques (préserve la qualité).
+-   {{< bi file-earmark-pdf-fill>}} [.txt ou .pdf]{style="color:green;"} pour la documentation (format non propriétaire).
+:::
+
+## Quatre bonnes pratiques pour organiser un ensemble de données
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+:::{style="text-align: left;font-size: 70%"}
+3.  Utilisez des [métadonnées détaillées]{style="color:green;"} (fichiers README et dictionnaires de données/codebook) pour [contextualiser]{style="text-decoration: underline;"} et [décrire]{style="text-decoration: underline;"} les fichiers de recherche.
+
+4.  Mettez en place des [flux de travail reproductibles]{style="color:green;"} en utilisant le codage (R, Python) pour transformer les [données brutes]{style="text-decoration: underline;"} en données destinées à l’[analyse]{style="text-decoration: underline;"}.
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center; font-size: 70%"}
+![Exemple de codebook (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-align="center" width="400" height="250"}
+:::
+::::
+:::::
+
+::: callout-tip
+Ces pratiques garantissent des ensembles de données [organisés, propres et validés]{style="color:green;"}.
+:::
+
+
+# Gestion des tableaux de données
+
+## {{< bi file-earmark-spreadsheet>}} Les tableaux sont au cœur des données scientifiques {.center}
+
+::: {style="text-align: left;font-size: 70%"}
+Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistrement et le stockage des données, les tableaux sont les objets les plus [mal organisés et inutilisables]{style="color:red;"} en recherche.
+:::
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![Source : https://dansteer.wordpress.com/](images/BadTable1.webp){fig-align="center" width="600" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Avec l'aimable autorisation d'un chercheur](images/BadTable2.png){fig-align="center" width="600" height="300"}
+:::
+::::
+:::::
+
+## Exemples issus de recherches publiées{.center}
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+:::
+::::
+:::::
+
+## Exemples de Crystal Lewis (2024) {.center}
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG)
+
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG)
+
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG)
+:::
+::::
+:::::
+
+## Exemples de Crystal Lewis (2024)
+
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-align="center" width="500" height="200"}
+:::
+
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-align="center" width="600" height="200"}
+:::
+
+
+## {{< bi file-earmark-spreadsheet>}} Construire des tableaux de données accessibles{.center} 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Un tableau de données typique au format long organise l'information en lignes et colonnes](images/GoodTable.png){fig-align="left" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+### Colonnes
+- {{< bi file-earmark-person-fill>}} [Variables d’identification]{style="color:green;"} : ID animal, point temporel, condition (facteurs ou caractères).
+- {{< bi dropbox>}} [Variables d’analyse]{style="color:green;"} : score, surface, nombre de cellules, etc. (numérique ou catégoriel).
+- {{< bi device-ssd-fill>}} [Variables créées]{style="color:green;"} lors du traitement (proportions, ratios, etc.).
+
+### Lignes
+- {{< bi clipboard-data-fill>}} [Valeurs des variables]{style="color:green;"} : entrées pour chaque colonne (variable). Chaque ligne correspond à une observation unique.
+:::
+::::
+:::::
+
+## {{< bi file-earmark-spreadsheet>}} Formats de tableaux larges et longs{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Un tableau de données typique au format large, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-align="left" width="600" height="350"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 70%"} 
+Dans un tableau au [format large]{style="color:green;"}, [chaque sujet]{style="text-decoration: underline;"} occupe une [seule ligne]{style="text-decoration: underline;"} et les variables sont disposées en colonnes distinctes : [sujet]{style="color:orange;"}, [Id1, Id2]{style="color:red;"}, [Var1, Var2]{style="color:gray;"}, [Temps 1, Temps 2, Temps 3]{style="color:magenta;"}.
+:::
+
+:::{.callout-tip .smaller}
+Ici, les colonnes représentent des [réponses ou prédicteurs]{style="color:green;"} dans une régression. Exemple :   
+
+[Cells_3D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
+::: 
+::::
+:::::
+
+## {{< bi file-earmark-spreadsheet>}} Formats de tableaux larges et longs 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Un tableau de données typique au format long, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-align="left" width="700" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 65%"} 
+Dans un tableau au [format long]{style="color:green;"}, [chaque sujet]{style="text-decoration: underline;"} occupe [plusieurs lignes]{style="color:green;"} et possède des observations associées sur [différentes lignes :]{style="text-decoration: underline;"}    
+
+[sujet]{style="color:orange;"} (répété), [Id1, Id2]{style="color:red;"} (répété), [Temps (1, 2, 3)]{style="color:magenta;"}.
+:::
+
+::: {.callout-tip .smaller}
+Utile pour l’analyse des [données temporelles]{style="color:green;"}, regroupant différentes variables de condition en une seule colonne. [Exemple :]{style="text-decoration: underline;"}   
+
+[Cells]{style="color:green;"} ~ [PointTemps (1D, 2D, 3D)]{style="color:magenta;"}.  
+
+Le format long est généralement privilégié pour l’analyse des données.
+::: 
+::::
+:::::
+
+## {{< bi balloon-heart-fill>}} Le meilleur dans tout ça... {.center}  
+
+Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convertir un tableau du format long au format large, et inversement. [Tutoriel](https://shanghai.hosting.nyu.edu/data/r/reshaping.html).   
+
+::: {style="text-align: center;font-size: 60%"} 
+![Conversion format long à large (https://tavareshugo.github.io/)](images/LongToWide.PNG){fig-align="center" width="600" height="350"}
+:::
+
+
+## {{< bi file-earmark-font-fill>}} Fournir des métadonnées (fichiers README){.center}    
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: left;font-size: 80%"} 
+- Les ensembles de données sont [incompréhensibles]{style="color:red;"} s’ils ne sont pas accompagnés de dictionnaires de données ou de codebooks ([(.txt, .md, .csv)]{style="color:green;"}) décrivant les [variables]{style="color:green;"} des tableaux de données. Cela peut également prendre la forme d’un [fichier README]{style="color:green;"} [(.txt, .md)]{style="color:green;"} qui décrit leur contexte et leur contenu.
+:::
+::::
+
+::::{#second-column}
+::: {style="text-align: center;font-size: 70%"} 
+![Exemple de fichier README](images/DescriptiveMetadata_czi.png){fig-align="center" width="600" height="500"}
+:::
+::::
+:::::
+
+# Gestion des images
+
+## {{< bi card-image>}} Lors de la gestion des images, veuillez considérer : {.center} 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-align="center" width="500" height="250"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+- {{< bi card-image>}} Convertissez les [fichiers propriétaires]{style="color:red;"} (ex. .czi) en [formats ouverts]{style="color:green;"} sans compression (.tif).
+- {{< bi gear-fill>}} Partagez les métadonnées [techniques]{style="color:green;"} (paramètres d’acquisition) et [descriptives]{style="color:green;"} (contexte et contenu) avec les images.
+- {{< bi code-square>}} Documentez toutes les procédures appliquées aux images (redimensionnement, soustraction de fond, etc.), par exemple en utilisant un [logiciel de codage/script]{style="color:green;"}.
+- {{< bi code-square>}} Réalisez les analyses en utilisant un [logiciel de codage/script]{style="color:green;"} pour garantir la reproductibilité. [Évitez l’analyse manuelle]{style="color:red;"}.
+:::
+::::
+:::::
+
+:::{.callout-tip .smaller}
+Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR) pour plus d’informations sur la gestion et le partage des images.
+:::
+
+## {{< bi card-image>}} Convertir les images en formats ouverts{.center} 
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Script FIJI pour enregistrer des images .czi en tiff. Extrait de Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 70%"} 
+Vous pouvez facilement [convertir]{style="color:green;"} vos fichiers propriétaires (.czi) en formats ouverts (.tif) en utilisant, par exemple, des [scripts FIJI]{style="color:green;"} [(lien)](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/Transform_czi-tif.ijm).
+:::
+::: {.callout-caution}
+Enregistrer des images .czi en .tif avec FIJI entraîne une [perte de métadonnées]{style="color:red;"} (archivées dans le fichier .czi). 
+::: 
+::::
+:::::
+
+## Suivre les métadonnées{.smaller} 
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+#### {{< bi gear-fill>}} [Techniques]{style="color:gray;"}
+
+Exportez les métadonnées techniques des images propriétaires (ex. .czi) en fichiers [.txt ou .csv]{style="color:green;"} (cela peut être appliqué à toutes les images d'un lot).  
+
+::: {style="text-align: center;font-size: 70%"} 
+![Exemple de métadonnées techniques dans FIJI : *image -> show info*](images/TechnicalMetadata_czi.png){fig-align="center" width="300" height="300"}
+:::
+::::
+
+:::: {#second-column}
+#### {{< bi file-earmark-pdf-fill>}} [Descriptives]{style="color:orange;"}
+
+Générez des fichiers README descriptifs pour expliquer la [provenance et les conventions de nommage]{style="color:green;"} des images.
+
+::: {style="text-align: center;font-size: 70%"} 
+![Exemple de [métadonnées descriptives](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-align="center" width="400" height="330"}
+:::
+::::
+:::::
+# Organiser (et partager) les données
+
+## Un paysage de recherche préoccupant
+
+::: {style="text-align: left;font-size: 80%"} 
+Nous vivons une pandémie de [science frauduleuse et irréproducible]{style="color:red;"}. 
+:::
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: left;font-size: 60%"} 
+![Augmentation du nombre d'articles rétractés au cours des trois dernières décennies](images/Economist_Retractions.png){fig-align="left" width="450" height="450"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 70%"}
+Ce paysage préoccupant exige que, en tant que [chercheurs intègres]{style="color:green;"}, nous appliquions de bonnes [pratiques scientifiques]{style="text-decoration: underline;"} pour partager les données et les procédures d’analyse. 
+:::
+::::
+:::::
+
+
+## Définir la structure d’un ensemble de données {.center} 
+
+Un [ensemble de données structuré]{style="color:green;"} est la clé pour le comprendre et le réutiliser.
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 70%"}
+![Source : pexels.com](images/Matryoska.jpeg)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 70%"}
+![Structure des fichiers](images/files.png){width="75%"}
+:::
+::::
+:::::
+
+
+## Principes pour structurer un ensemble de données {.center}
+
+Définissez une structure pour les données au [début]{style="color:green;"} (idéal) ou [au cours]{style="color:green;"} de votre recherche.
+
+::: callout-tip
+## À considérer
+
+-   {{< bi folder-fill >}} Dossiers/[structures de répertoires]{style="color:green;"}
+-   {{< bi filetype-tiff >}} Réfléchissez aux [types/formats de fichiers]{style="color:green;"}
+-   {{< bi file-earmark-font-fill >}} Établissez des [conventions de nommage]{style="color:green;"} logiques et descriptives
+:::
+
+Dans l’ensemble, assurez-vous que la structure des données est [logique et cohérente]{style="color:green;"}, compréhensible pour les utilisateurs externes.
+
+
+## {{< bi diagram-2-fill >}} Explorer l’arborescence des dossiers {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+[TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) est un [modèle de projet]{style="color:green;"} conçu pour standardiser les ensembles de données.
+
+[Téléchargez](https://github.com/Alliance-RDM-GDR/RDM_DepositingData/blob/main/resources/TIER4.0_DatasetTemplate.zip) la structure du projet et adaptez-la à des cas spécifiques.
+
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Arborescence des dossiers](images/tier.png){width="40%"}
+:::
+::::
+:::::
+
+## {{< bi folder-fill >}} Données brutes {.center}
+
+Un dossier [Data_Raw/]{style="color:orange;"} peut contenir :
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+-   [Images originales]{style="color:green;"} (.tiff, .czi)
+-   [Fichiers de sortie]{style="color:green;"} des appareils de mesure (.txt, .csv)
+-   [Feuilles d’enregistrement]{style="color:green;"} originales (.png, .csv, .xlsx)
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Arborescence des dossiers](images/data_raw.png){width="90%"}
+:::
+::::
+:::::
+
+
+## Données brutes - métadonnées {.center}
+
+Incluez des [métadonnées/]{style="color:orange;"} permettant de comprendre et de réutiliser le contenu des fichiers :
+
+- {{< bi file-earmark-font-fill >}} Détails méthodologiques et techniques.
+
+- {{< bi file-earmark-font-fill >}} Codebooks / dictionnaires de données expliquant les variables et unités. Ils peuvent être des fichiers [.txt](https://osf.io/9n3gh) ou [.csv-xlxs](https://osf.io/925sh).
+
+- {{< bi filetype-tiff >}} Paramètres d’instrumentation et d’acquisition pour les images.
+
+## {{< bi folder-fill >}} Données d’analyse (traitées) {.center}
+
+Un dossier [Data_Analysis/]{style="color:orange;"} contient des [fichiers traités]{style="color:green;"} utilisés pour générer les résultats de la recherche.
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+
+- Métadonnées similaires aux données brutes.
+
+- Fichiers [Data_Appendix]{style="color:green;"} présentant des statistiques descriptives de base ou des distributions de données.
+
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Arborescence des dossiers](images/data_processed.png){width="90%"}
+:::
+::::
+:::::
+
+## {{< bi folder-fill >}} Données intermédiaires (optionnel) {.center}
+
+Un dossier [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} peut contenir des données intermédiaires traitées ou des fichiers prétraités dans le cadre d’un pipeline d’analyse. Par exemple, des "masques" d’image et des classificateurs d’apprentissage automatique utilisés pour un traitement ultérieur des images.
+
+
+## {{< bi code-square >}} Le script est la voie à suivre 
+
+::: {style="text-align: left;font-size: 80%"}
+Bien que la plupart des scientifiques soient plus à l’aise avec les interfaces graphiques (GUI), le paysage actuel de la recherche exige l'utilisation de [scripts et de code]{style="color:green;"} pour garantir la reproductibilité des résultats scientifiques.
+:::
+
+![](images/Theway.png){fig-align="center"}
+
+::: callout-tip
+{{< bi code-square >}} Le codage doit être considéré comme une [compétence essentielle]{style="color:green;"} au même titre que d’autres méthodes de recherche.
+:::
+
+## Outils pour gérer le code et les scripts {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-Studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+### {{< bi github>}} GitHub (Contrôle de version)
+::: {style="text-align: center;font-size: 100%"} 
+![Écran GitHub](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+:::::
+
+## Avec R-Studio (R et Python), vous pouvez {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-Studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 70%"}
+- {{< bi file-earmark-spreadsheet-fill>}} Manipuler des [tableaux de données et variables](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_10x_ROIs_CD31-Pdgfrb_Coloc.qmd) avec R et le package [Tidyverse](https://www.tidyverse.org/).  
+
+- {{< bi images>}} Analyser des [images](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Confocal_40x_ROIs_Pdgfrb_Morpho_BatchScript.qmd) avec Python et [skimage](https://scikit-image.org/). 
+
+- {{< bi wallet-fill>}} Traiter des fichiers et données de [cytométrie en flux](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/FlowCytometry_Pdgfrb_Processing.qmd) avec R et [FlowCore](https://bioconductor.org/packages/release/bioc/html/flowCore.html) de [BioConductor](https://bioconductor.org/).
+
+- {{< bi bandaid>}} Analyser des données de [RNA-seq](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) avec R et [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) de [BioConductor](https://bioconductor.org/).
+
+- {{< bi bar-chart-line-fill>}} Effectuer des [modélisations statistiques avancées](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_5x_Ipsilateral_Gfap_IntDen.qmd) avec [brms](https://paulbuerkner.com/brms/).
+
+- Et bien plus encore...
+:::
+::::
+:::::
+
+## Suivez les versions avec un contrôle de version {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 100%"} 
+![Écran GitHub](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 70%"}
+Avec [GitHub]{style="color:magenta;"} {{< bi github>}} ou [GitLab]{style="color:magenta;"} {{< bi gitlab>}}, vous pouvez :
+
+- {{< bi database-fill-check>}} [Stocker]{style="color:green;"} votre code et vos données en toute sécurité et les [partager]{style="color:green;"} avec des collaborateurs et le public.
+
+- {{< bi subtract>}} Conserver un [historique des modifications]{style="color:green;"} et versionner votre code (v 1.0, 1.2, 2.0).
+
+- {{< bi folder-plus>}} [Lier/rendre]{style="color:green;"} votre code sur différentes plateformes (ex. [Open Science Framework Repository](https://osf.io/)).
+
+- {{< bi clipboard2-pulse-fill>}} [Soutenir d'autres chercheurs]{style="color:green;"} et contribuer à une culture de [science ouverte et reproductible]{style="color:green;"}.
+
+:::
+::::
+:::::
+
+## Communautés internationales de soutien au codage {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 100%"} 
+![[R Ladies](https://github.com/rladies)](images/Rladies_Logo.png){fig-align="center" width="300" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 100%"} 
+![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-align="center" width="300" height="300"}
+:::
+::::
+:::::
+
+## {{< bi folder-fill >}} Scripts de traitement {.center}
+
+::: {style="text-align: left;font-size: 90%"} 
+Un dossier [Scripts_Processing]{style="color:orange;"} contient du code permettant de transformer les données brutes pour l’analyse :
+
+-   Supprimer des variables (sous-ensemble du jeu de données)
+-   Générer de nouvelles variables (effectuer des calculs, calculer des moyennes, etc.)
+-   Combiner différentes sources d’informations (fusionner des tableaux ou des fichiers)
+:::
+
+::: callout-tip
+Envisagez d’enregistrer les fichiers intermédiaires générés dans le dossier [Data_Intermediate/]{style="color:orange;"}.
+:::
+
+## {{< bi lightbulb-fill >}} À garder en tête {.center}
+
+Les [conventions de nommage logiques]{style="color:green;"} sont essentielles pour relier les données brutes, les scripts de traitement et les données d’analyse.
+
+
+## {{< bi folder-fill >}} Scripts d'analyse 
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: left; font-size: 80%"}
+Le dossier [Scripts_Analysis]{style="color:orange;"} contient le code permettant de générer des résultats sous forme de :
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tableaux
+-   {{< bi calculator-fill >}} Modèles statistiques
+:::
+::::
+
+:::: {#Second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Arborescence des dossiers](images/scripts_processing.png){width="90%"}
+:::
+::::
+:::::
+
+::: callout-tip
+Ces scripts importent et traitent les [données d'analyse]{style="color:orange;"}.
+:::
+
+## {{< bi code-slash >}} Un script maître ? {.center}
+
+Le dossier [Scripts/]{style="color:orange;"} peut également contenir un [script maître]{style="color:green;"} qui exécute tous les autres scripts, créant ainsi un pipeline entièrement automatisé.
+
+
+## {{< bi folder-fill >}} Le dossier des résultats {.center}
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+
+Le dossier [Results/]{style="color:orange;"} contient les fichiers générés par les scripts d'analyse sous forme de :
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tableaux
+-   {{< bi calculator-fill >}} Modèles statistiques
+::::
+
+:::: {#Second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Arborescence des dossiers](images/output.png){width="100%"}
+:::
+::::
+:::::
+
+
+# Rédiger un fichier README
+
+## Fichiers README {.center} 
+
+Les [fichiers README]{style="color:green;"} sont des guides pour [comprendre les ensembles de données et les tableaux]{style="color:green;"}.
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center; font-size: 50%"}
+![Source : https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="700" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="font-size: 80%;"}
+Il existe des modèles et des ressources pour guider la rédaction des fichiers README :
+- [Créer un fichier README](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)\
+- [Readme.so](https://readme.so/)\
+- [Readme.ai](https://readme-ai.streamlit.app/)
+:::
+::::
+:::::
+
+## Contenu d’un fichier README
+
+:::{.r-fit-text}
+En général, un fichier README pour un ensemble de données comprend :
+
+-   {{< bi database-fill >}} Un [identifiant de l’ensemble de données]{style="color:green;"} contenant des informations telles que le titre, les auteurs, la date de collecte des données et les informations géographiques.
+-   {{< bi folder-fill >}} Une [cartographie des fichiers/dossiers]{style="color:green;"} définissant le contenu et la hiérarchie des dossiers et sous-dossiers, ainsi que les conventions de nommage.
+-   {{< bi gear-fill >}} Des [informations méthodologiques]{style="color:green;"} détaillant les méthodes de collecte/génération des données, les analyses effectuées et les conditions expérimentales.
+
+-   {{< bi sd-card-fill >}} Un ensemble d’[instructions et logiciels]{style="color:green;"} pour ouvrir, manipuler et reproduire les pipelines de recherche.
+
+-   {{< bi credit-card-2-front-fill >}} Des [informations sur le partage et l’accès]{style="color:green;"} précisant les autorisations et les conditions d’utilisation.
+:::
+
+::: {.callout-caution collapse="true"}
+## À noter
+Un ensemble de données est un [objet autonome]{style="text-decoration: underline;"}. Les informations méthodologiques [NE DOIVENT PAS]{style="color:red;"} être reléguées aux articles de recherche associés.
+:::
+
+
+# Liste de contrôle pour une recherche reproductible
+
+## {{< bi card-checklist >}} Engagement envers la reproductibilité {.center}
+
+::: {style="text-align: left;font-size: 80%"}
+Un projet de recherche [reproductible]{style="color:green;"} répond aux critères suivants :
+
+1.  {{< bi diagram-2-fill >}} Les [dossiers et fichiers]{style="color:green;"} sont organisés de manière [structurée]{style="text-decoration: underline;"} avec des [formats de fichiers ouverts]{style="color:green;"} (ex. CSV, TIFF) et des [conventions de nommage cohérentes]{style="color:green;"}.
+
+2.  {{< bi code-square >}} Le traitement et l’analyse des données reposent sur des [flux de travail reproductibles]{style="color:green;"}. Les résultats (images, tableaux, figures, graphiques) sont partagés comme des [artéfacts indépendants]{style="text-decoration: underline;"}.
+
+3.  {{< bi file-earmark-text-fill >}} Les fichiers [README et dictionnaires de données]{style="color:green;"} permettent de comprendre l’ensemble de données comme un objet autonome, en fournissant [le contexte, les méthodes, les étapes de traitement et les variables]{style="text-decoration: underline;"}.
+:::
+
+## En résumé {.center}
+
+Un ensemble de données est un objet de recherche indépendant qui peut être utilisé (et cité) [indépendamment]{style="color:green;"} de l’article de recherche.
+
+Mieux encore, considérez les articles comme des [compléments à votre ensemble de données !]{style="color:green;"}
+
+::: callout-tip 
+Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_DepositingData) pour connaître les principes de dépôt des données dans les référentiels.
+:::
+
+
+## Ressources et soutien {.smaller}
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+### Matériel de soutien
+
+-   [Documentation FRDR](https://www.frdr-dfdr.ca/docs/fr/depot_de_donnees/)
+-   [Ressources de formation](https://alliancecan.ca/fr/services/gestion-des-donnees-de-recherche/apprentissage-et-formation/ressources-de-formation) de l'Alliance
+-   [RDMkit](https://rdmkit.elixir-europe.org/sharing)
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 100%"}
+![Cette présentation est disponible [ici](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData) (en anglais ou en français)](images/Presentation_QR-code.png){fig-align="center" width="200" height="200"}
+:::
+::::
+:::::
+
+### Services de soutien
+
+Contactez-nous pour vous assurer que vos données sont bien préparées et peuvent être efficacement partagées avec la communauté scientifique.
+
+-   Email : rdm-gdr\@alliancecan.ca
+-   https://www.frdr-dfdr.ca/repo/
+
+

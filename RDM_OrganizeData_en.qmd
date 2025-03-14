@@ -1,5 +1,5 @@
 ---
-title: "Organize and handle research data"
+title: "Handling and organizing research data"
 subtitle: "A primer for researchers"
 
 author: 
@@ -8,9 +8,6 @@ author:
     affiliations:
       - name: Digital Research Alliance of Canada
 
-date: last-modified
-date-format: full
-
 format: 
   html:
     embed-resources: true
@@ -18,7 +15,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Organize and handle research data - Daniel Manrique-Castano, Ph.D"
+    footer: "Handling and organizing research data - Daniel Manrique-Castano, Ph.D"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
