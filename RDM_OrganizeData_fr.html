@@ -207,7 +207,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center; font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DificultData.webp" width="400" height="400"></p>
+<p><img data-src="images/DificultData.webp" alt="Une illustration en noir et blanc représentant une personne frustrée, tenant sa tête et entourée de points d'interrogation. La personne est assise à une table couverte de grandes feuilles de calcul désorganisées, remplies de chiffres et de texte, symbolisant la difficulté à gérer et comprendre les données de recherche." width="400" height="400"></p>
 <figcaption>Les autres ne comprennent généralement pas les données de recherche</figcaption>
 </figure>
 </div>
@@ -216,54 +216,39 @@ Daniel Manrique-Castano, Ph.D
 </div>
 </div>
 </section>
-<section id="quatre-principes-pour-organiser-un-ensemble-de-données" class="slide level2">
-<h2>Quatre principes pour organiser un ensemble de données</h2>
-<div style="text-align: left;font-size: 70%">
-<ol type="1">
-<li>Utilisez des <a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">conventions de nommage</a> cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :</li>
-</ol>
+<section id="utilisez-conventions-de-nommage" class="slide level2 center">
+<h2>1. Utilisez conventions de nommage</h2>
+<p>Utilisez des <a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">conventions de nommage</a> cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :</p>
 <ul>
 <li><i class="bi-card-image " style="" role="img" aria-hidden="true"></i> <span style="color:red;">A1.tif</span> <i class="bi-arrow-right " style="" role="img" aria-hidden="true"></i> <span style="color:green;">Exp_MouseID_Jour_Condition_Marqueur.tif</span></li>
 <li><i class="bi-file-earmark-spreadsheet " style="" role="img" aria-hidden="true"></i> <span style="color:red;">CellsTable.xls</span> <i class="bi-arrow-right " style="" role="img" aria-hidden="true"></i> <span style="color:green;">Widefield_5x_Cortex_NeuN_Comptes.csv</span></li>
 </ul>
-<ol start="2" type="1">
-<li>Utilisez des <span style="color:green;">formats de fichiers appropriés, ouverts et accessibles</span> <a href="https://osf.io/ena5p">(lien)</a> pour améliorer l’accessibilité :</li>
-</ol>
+</section>
+<section id="prioriser-formats-de-fichiers-ouverts" class="slide level2 center">
+<h2>2. Prioriser formats de fichiers ouverts</h2>
+<p>Utilisez des <span style="color:green;">formats de fichiers appropriés, ouverts et accessibles</span> <a href="https://osf.io/ena5p">(lien)</a> pour améliorer l’accessibilité :</p>
 <ul>
 <li><i class="bi-card-image " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.tif</span> pour les images (préserve les métadonnées).</li>
 <li><i class="bi-file-earmark-spreadsheet " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.csv</span> pour les tableaux (format non propriétaire).</li>
 <li><i class="bi-file-bar-graph-fill " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.png ou .svg</span> pour les graphiques (préserve la qualité).</li>
 <li><i class="bi-file-earmark-pdf-fill " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.txt ou .pdf</span> pour la documentation (format non propriétaire).</li>
 </ul>
-</div>
 </section>
-<section id="quatre-bonnes-pratiques-pour-organiser-un-ensemble-de-données" class="slide level2">
-<h2>Quatre bonnes pratiques pour organiser un ensemble de données</h2>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div style="text-align: left;font-size: 70%">
-<ol start="3" type="1">
-<li><p>Utilisez des <span style="color:green;">métadonnées détaillées</span> (fichiers README et dictionnaires de données/codebook) pour <span style="text-decoration: underline;">contextualiser</span> et <span style="text-decoration: underline;">décrire</span> les fichiers de recherche.</p></li>
-<li><p>Mettez en place des <span style="color:green;">flux de travail reproductibles</span> en utilisant le codage (R, Python) pour transformer les <span style="text-decoration: underline;">données brutes</span> en données destinées à l’<span style="text-decoration: underline;">analyse</span>.</p></li>
-</ol>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="fournir-des-métadonnées-complètes" class="slide level2 center">
+<h2>3. Fournir des métadonnées complètes</h2>
+<p>Utilisez des <span style="color:green;">métadonnées détaillées</span> (fichiers README et dictionnaires de données/codebook) pour <span style="text-decoration: underline;">contextualiser</span> et <span style="text-decoration: underline;">décrire</span> les fichiers de recherche.</p>
 <div style="text-align: center; font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Codebook.jpg" width="400" height="250"></p>
+<p><img data-src="images/Codebook.jpg" alt="Un tableau présentant un codebook pour un ensemble de données, avec des colonnes intitulées 'Nom de variable,' 'Description,' 'Type,' et 'Valeurs ou caractéristiques.' Le tableau définit des variables telles que l'identifiant du patient, le sexe, la date de la procédure, le groupe de traitement et les résultats cliniques, en précisant les types de données (numérique, date, caractère) et les significations des valeurs (ex. 1=Femme, 2=Homme). Ce codebook fournit une vue d'ensemble structurée des variables utilisées dans la gestion des données de recherche." width="400" height="250"></p>
 <figcaption>Exemple de codebook (https://domstat.med.ucla.edu/)</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+<section id="mettre-en-œuvre-des-flux-de-travail-reproductibles" class="slide level2 center">
+<h2>4. Mettre en œuvre des flux de travail reproductibles</h2>
+<p>Mettez en place des <span style="color:green;">flux de travail reproductibles</span> en utilisant le codage (R, Python) pour transformer les <span style="text-decoration: underline;">données brutes</span> en données destinées à l’<span style="text-decoration: underline;">analyse</span>.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -321,7 +306,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable1.webp" width="600" height="300"></p>
+<p><img data-src="images/BadTable1.webp" alt="Exemple de mauvais formatage de données, illustrant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne." width="600" height="300"></p>
 <figcaption>Source : https://dansteer.wordpress.com/</figcaption>
 </figure>
 </div>
@@ -331,7 +316,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2.png" width="600" height="300"></p>
+<p><img data-src="images/BadTable2.png" alt="Exemple de mauvais formatage des données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. On peut également observer une combinaison de chiffres et de données numériques dans la même feuille." width="600" height="300"></p>
 <figcaption>Avec l’aimable autorisation d’un chercheur</figcaption>
 </figure>
 </div>
@@ -351,7 +336,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2_Zhao(2024)_NatureComm.png" width="400" height="400"></p>
+<p><img data-src="images/BadTable2_Zhao(2024)_NatureComm.png" alt="Exemple de mauvais formatage de données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. On peut également observer une combinaison de chiffres et de données numériques dans la même feuille." width="400" height="400"></p>
 <figcaption>Zhao et al.&nbsp;(2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6</figcaption>
 </figure>
 </div>
@@ -361,7 +346,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2_Balinda(2024)_NatureComm.png" width="400" height="400"></p>
+<p><img data-src="images/BadTable2_Balinda(2024)_NatureComm.png" alt="Exemple de mauvais formatage de données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. Nous voyons également des codes de couleur qui ne doivent pas être définis dans une feuille de calcul de données." width="400" height="400"></p>
 <figcaption>Balinda et al.&nbsp;(2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9</figcaption>
 </figure>
 </div>
@@ -381,13 +366,13 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-3.PNG"></p>
+<p><img data-src="images/Lewis_fig3-3.PNG" alt="Deux tableaux comparant des structures de données. Le tableau de gauche, intitulé 'Pas un rectangle,' présente une structure irrégulière avec un alignement incohérent des noms de variables et des valeurs, rendant son interprétation difficile. Le tableau de droite, intitulé 'Rectangle,' suit un format structuré avec des colonnes clairement définies pour l'ID étudiant, l'âge en mois, le score brut de lecture et le score standardisé de lecture. Cette comparaison met en évidence l'importance d'un format de données bien organisé pour la gestion des données de recherche."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-4.PNG"></p>
+<p><img data-src="images/Lewis_fig3-4.PNG" alt="Deux tableaux comparant la cohérence des valeurs de colonnes. Le tableau de gauche, intitulé 'Valeurs de colonnes incohérentes,' contient des formats de date variés (ex. '10-12-2023,' 'Oct. 15, 2023,' 'September 15') et des valeurs catégoriques incohérentes pour l'achèvement du sondage ('y,' 'Yes,' 'Y,' 'no'). Le tableau de droite, intitulé 'Valeurs de colonnes cohérentes,' normalise les dates au format 'AAAA-MM-JJ' et unifie les réponses catégoriques en 'y' et 'n.' Cette comparaison illustre les meilleures pratiques pour garantir la clarté et la fiabilité des données."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -397,13 +382,13 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-5.PNG"></p>
+<p><img data-src="images/Lewis_fig3-5.PNG" alt="Deux tableaux comparant les formats de variables. Le tableau de gauche, intitulé 'Variable de type caractère,' contient des valeurs d'âge incohérentes : un espace avant '24' fait de cette entrée un texte, '49 years old' ajoute du texte inutile, et '36..0' contient une erreur de formatage. Le tableau de droite, intitulé 'Variable numérique,' stocke correctement les âges sous forme numérique sans espace, texte superflu ou erreurs de formatage. Cette comparaison met en évidence l'importance du nettoyage des données numériques pour une analyse correcte."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-6.PNG"></p>
+<p><img data-src="images/Lewis_fig3-6.PNG" alt="Deux tableaux comparant la structuration des données. Le tableau de gauche, intitulé 'Deux informations dans une seule variable,' combine le nombre d'incidents et le nombre total d'inscrits en une seule colonne (ex. '55/250'), rendant l'analyse plus difficile. Le tableau de droite, intitulé 'Deux informations dans deux variables,' sépare ces valeurs en colonnes distinctes : 'incident' pour le nombre d'incidents et 'enrollment' pour le nombre d'inscrits. Cette structuration facilite l'analyse et suit les bonnes pratiques de gestion des données."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -417,7 +402,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-7.PNG" width="500" height="200"></p>
+<p><img data-src="images/Lewis_fig3-7.PNG" alt="Deux tableaux comparant l'utilisation de valeurs explicites et implicites. Le tableau de gauche, intitulé 'Valeurs non explicites,' omet la répétition des identifiants d'école et des années, supposant qu'ils s'appliquent à plusieurs lignes, ce qui peut causer des erreurs lors du traitement des données. Le tableau de droite, intitulé 'Valeurs explicites,' répète ces informations pour chaque ligne, garantissant une clarté accrue et une meilleure lisibilité pour l'analyse." width="500" height="200"></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -425,7 +410,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-8.PNG" width="600" height="200"></p>
+<p><img data-src="images/Lewis_fig3-8.PNG" alt="Deux tableaux comparant l'utilisation explicite et implicite des variables. Le tableau de gauche, intitulé 'Variables non explicites,' utilise la couleur des cellules pour indiquer les conditions de traitement, ce qui peut être mal interprété ou perdu dans l'analyse. Le tableau de droite, intitulé 'Variables explicites,' ajoute une colonne 'treatment' avec des valeurs numériques (0 ou 1) pour indiquer explicitement la condition de traitement. Cette approche garantit une meilleure transparence des données et facilite leur analyse." width="600" height="200"></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -442,7 +427,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/GoodTable.png" width="500" height="300"></p>
+<p><img data-src="images/GoodTable.png" alt="Un tableau bien structuré affichant des données expérimentales pour différentes souris. Les colonnes incluent 'MouseID,' 'DPI' (jours après la lésion), 'Condition' (MCAO), 'Région' (Contra, Ipsi, Peri), ainsi que les comptages cellulaires pour NeuN, Ki67 et BrdU. La colonne 'MouseID' est surlignée en orange pour la distinguer visuellement. Ce tableau illustre une organisation claire des données, essentielle pour leur analyse en recherche." width="500" height="300"></p>
 <figcaption>Un tableau de données typique au format long organise l’information en lignes et colonnes</figcaption>
 </figure>
 </div>
@@ -476,7 +461,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Lewis_fig3-14.PNG" width="600" height="350"></p>
+<p><img data-src="images/Lewis_fig3-14.PNG" alt="Un diagramme illustrant la transformation entre les formats de données long et large. Le tableau de gauche représente un format long où chaque ligne contient un 'pays,' une 'année' et une valeur associée. Le tableau de droite montre le format large, où les années sont réparties sur plusieurs colonnes (ex. 'yr1960', 'yr1970', 'yr2010'). La fonction `pivot_wider()` transforme les données en format large, tandis que `pivot_longer()` effectue l'opération inverse, facilitant l'analyse des données longitudinales." width="600" height="350"></p>
 <figcaption>Un tableau de données typique au format large, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -517,7 +502,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Lewis_fig3-15.PNG" width="700" height="300"></p>
+<p><img data-src="images/Lewis_fig3-15.PNG" alt="Diagramme illustrant la transformation de données longitudinales de tableaux séparés en un format long. Les tableaux du haut et du bas représentent les « données de la première vague » et les « données de la deuxième vague », chacune contenant les mesures de l'anxiété (« anx1 » et “anx2”) pour les étudiants identifiés par « stu_id ». Le tableau de droite, intitulé « Long format data », restructure les données en ajoutant une colonne « vague », chaque ligne représentant les mesures d'un étudiant à une vague spécifique. Cette transformation optimise l'ensemble des données pour une analyse longitudinale et un stockage efficace." width="700" height="300"></p>
 <figcaption>Un tableau de données typique au format long, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -555,7 +540,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/LongToWide.PNG" width="600" height="350"></p>
+<p><img data-src="images/LongToWide.png" alt="Diagramme illustrant la transformation entre les formats de données long et large en utilisant `pivot_wider()` et `pivot_longer()`. Le tableau de gauche représente des données au format long, où chaque ligne contient un « pays », une “année” et une valeur « métrique » correspondante. Le tableau de droite représente des données au format large, où les valeurs de l'année sont réparties sur plusieurs colonnes (par exemple, “yr1960”, “yr1970”, “yr2010”), chacune contenant la valeur métrique correspondante pour chaque pays. La fonction `pivot_wider()` convertit le format long en format large, tandis que `pivot_longer()` inverse le processus, démontrant ainsi la flexibilité de la mise en forme des données dans R." width="600" height="350"></p>
 <figcaption>Conversion format long à large (https://tavareshugo.github.io/)</figcaption>
 </figure>
 </div>
@@ -571,7 +556,7 @@ Daniel Manrique-Castano, Ph.D
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div style="text-align: left;font-size: 80%">
 <ul>
-<li>Les ensembles de données sont <span style="color:red;">incompréhensibles</span> s’ils ne sont pas accompagnés de dictionnaires de données ou de codebooks (<span style="color:green;">(.txt, .md, .csv)</span>) décrivant les <span style="color:green;">variables</span> des tableaux de données. Cela peut également prendre la forme d’un <span style="color:green;">fichier README</span> <span style="color:green;">(.txt, .md)</span> qui décrit leur contexte et leur contenu.</li>
+<li>Les ensembles de données sont <span style="color:red;">incompréhensibles</span> s’ils ne sont pas accompagnés de dictionnaires de données ou de codebooks <span style="color:green;">(.txt, .md, .csv)</span> décrivant les <span style="color:green;">variables</span> des tableaux de données. Cela peut également prendre la forme d’un <span style="color:green;">fichier README</span> <span style="color:green;">(.txt, .md)</span> qui décrit leur contexte et leur contenu.</li>
 </ul>
 </div>
 </div>
@@ -579,7 +564,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DescriptiveMetadata_czi.png" width="600" height="500"></p>
+<p><img data-src="images/DescriptiveMetadata_czi.png" alt="Une capture d'écran de métadonnées descriptives pour un ensemble de données sur la réactivité des cellules PDGFR-B+ dans un modèle murin d'ischémie cérébrale. Le texte détaille l'origine des images, les conventions de nommage des fichiers, le contenu des dossiers et les conditions expérimentales. Il explique également le processus de génération des images à partir des fichiers Zenodo, leur traitement avec CellProfiler et fournit des liens vers des articles de recherche et des dépôts OSF pour plus d’informations." width="600" height="500"></p>
 <figcaption>Exemple de fichier README</figcaption>
 </figure>
 </div>
@@ -628,7 +613,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BrainStaining.png" width="500" height="250"></p>
+<p><img data-src="images/BrainStaining.png" alt="Image de microscopie à fluorescence d'une section coronale de cerveau de souris. La section est marquée par des marqueurs d’immunofluorescence" width="500" height="250"></p>
 <figcaption>Manrique-Castano et al.&nbsp;(2024). DOI: DOI 10.17605/OSF.IO/3VG8J</figcaption>
 </figure>
 </div>
@@ -673,7 +658,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Transform_czi-tif.png" width="500" height="300"></p>
+<p><img data-src="images/Transform_czi-tif.png" alt="Capture d’écran d’un script macro ImageJ écrit en JavaScript. Le script automatise la conversion des fichiers d’imagerie microscopique `.czi` en format `.tif`. Il demande à l’utilisateur de sélectionner un répertoire, récupère la liste des fichiers `.czi`, et traite chaque fichier en l’ouvrant avec le Bio-Formats Importer. Il extrait ensuite deux canaux d’image et les enregistre séparément en tant que fichiers `.tif` dans un dossier 'Images_Tiff'. Le script garantit un traitement systématique de tous les fichiers et ferme toutes les fenêtres après l’exécution." width="500" height="300"></p>
 <figcaption>Script FIJI pour enregistrer des images .czi en tiff. Extrait de Manrique-Castano et al.&nbsp;(2024). DOI: DOI 10.17605/OSF.IO/3VG8J</figcaption>
 </figure>
 </div>
@@ -713,7 +698,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/TechnicalMetadata_czi.png" width="300" height="300"></p>
+<p><img data-src="images/TechnicalMetadata_czi.png" alt="Capture d’écran de la visionneuse de métadonnées affichant les métadonnées techniques d’un fichier d’imagerie microscopique `.czi`. Le tableau des métadonnées comprend des clés et des valeurs telles que 'BitsPerPixel' (14), 'DimensionOrder' (XYZCT), et 'PixelType' (uint16). D’autres détails indiquent que l’image contient 4 canaux (SizeC), un seul point temporel (SizeT = 1), des dimensions de 2752x2208 pixels (SizeX, SizeY), et un seul plan Z (SizeZ = 1). Ces métadonnées fournissent des informations essentielles pour le traitement et l’analyse d’images en microscopie de recherche." width="300" height="300"></p>
 <figcaption>Exemple de métadonnées techniques dans FIJI : <em>image -&gt; show info</em></figcaption>
 </figure>
 </div>
@@ -725,7 +710,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DescriptiveMetadata_czi.png" width="400" height="330"></p>
+<p><img data-src="images/DescriptiveMetadata_czi.png" alt="Une capture d'écran de métadonnées descriptives pour un ensemble de données sur la réactivité des cellules PDGFR-B+ dans un modèle murin d'ischémie cérébrale. Le texte détaille l'origine des images, les conventions de nommage des fichiers, le contenu des dossiers et les conditions expérimentales. Il explique également le processus de génération des images à partir des fichiers Zenodo, leur traitement avec CellProfiler et fournit des liens vers des articles de recherche et des dépôts OSF pour plus d’informations." width="400" height="330"></p>
 <figcaption>Exemple de <a href="https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt">métadonnées descriptives</a></figcaption>
 </figure>
 </div>
@@ -777,7 +762,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: left;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Economist_Retractions.png" width="450" height="450"></p>
+<p><img data-src="images/Economist_Retractions.png" alt="Un graphique de The Economist intitulé 'Pants on fire,' illustrant le nombre cumulé d’articles scientifiques biomédicaux rétractés de 1996 à 2023. Le graphique montre une augmentation exponentielle des rétractations, dépassant 15 000 en 2023. Les données proviennent de Retraction Watch et couvrent 4 244 revues évaluées. Ce graphique met en évidence les préoccupations croissantes concernant l'intégrité scientifique et l'augmentation du nombre de publications rétractées au fil du temps." width="450" height="450"></p>
 <figcaption>Augmentation du nombre d’articles rétractés au cours des trois dernières décennies</figcaption>
 </figure>
 </div>
@@ -803,7 +788,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Matryoska.jpeg"></p>
+<p><img data-src="images/Matryoska.jpeg" alt="Un étalage de poupées russes traditionnelles Matriochkas, également appelées poupées gigognes, peintes dans des couleurs vives."></p>
 <figcaption>Source : pexels.com</figcaption>
 </figure>
 </div>
@@ -813,7 +798,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/files.png" style="width:75.0%"></p>
+<p><img data-src="images/files.png" style="width:75.0%" alt="Un arbre de répertoires structuré représentant un projet de recherche organisé. Les dossiers de premier niveau incluent 'Code,' contenant des scripts R pour le nettoyage et l'analyse des données ('clean_raw_data.r,' 'analysis_1.r,' 'analysis_2.r'); 'Data,' divisé en 'Raw_data' (avec les fichiers bruts 'file_a.raw' et 'file_b.raw') et 'Processed_data' (contenant les fichiers CSV nettoyés 'file_a.csv' et 'file_b.csv'); 'Outputs,' qui comprend des sous-dossiers pour 'Figures' et 'Models'; ainsi qu'un fichier 'README.txt'. Cette organisation suit les bonnes pratiques pour la gestion des données de recherche."></p>
 <figcaption>Structure des fichiers</figcaption>
 </figure>
 </div>
@@ -859,7 +844,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/tier.png" style="width:40.0%"></p>
+<p><img data-src="images/tier.png" style="width:40.0%" alt="Une structure de répertoires hiérarchique suivant le protocole TIER 4.0 pour l'organisation des données de recherche. Le dossier racine 'Project/' contient des documents clés tels que 'The Read Me File' et 'The Report.' Le dossier 'Data/' est divisé en 'InputData/' (avec les sous-dossiers 'Input Data Files' et 'Metadata,' incluant 'Data Sources Guide' et 'Codebooks'), 'AnalysisData/' (avec 'Analysis Data Files' et 'The Data Appendix') et 'IntermediateData/'. Le dossier 'Scripts/' comprend des sous-dossiers pour 'ProcessingScripts/', 'DataAppendixScripts/', 'AnalysisScripts/', ainsi que 'The Master Script.' Enfin, le dossier 'Output/' contient 'DataAppendixOutput' et 'Results.' Cette organisation garantit la transparence et la reproductibilité dans la gestion des données de recherche."></p>
 <figcaption>Arborescence des dossiers</figcaption>
 </figure>
 </div>
@@ -887,7 +872,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/data_raw.png" style="width:90.0%"></p>
+<p><img data-src="images/data_raw.png" style="width:90.0%" alt="Capture d'écran d'un répertoire structuré contenant des données organisées."></p>
 <figcaption>Arborescence des dossiers</figcaption>
 </figure>
 </div>
@@ -923,7 +908,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/data_processed.png" style="width:90.0%"></p>
+<p><img data-src="images/data_processed.png" style="width:90.0%" alt="Capture d'écran d'un répertoire structuré contenant des données traitées organisées."></p>
 <figcaption>Arborescence des dossiers</figcaption>
 </figure>
 </div>
@@ -942,7 +927,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Bien que la plupart des scientifiques soient plus à l’aise avec les interfaces graphiques (GUI), le paysage actuel de la recherche exige l’utilisation de <span style="color:green;">scripts et de code</span> pour garantir la reproductibilité des résultats scientifiques.</p>
 </div>
 
-<img data-src="images/Theway.png" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<img data-src="images/Theway.png" class="quarto-figure quarto-figure-center r-stretch" alt="Un mème humoristique sur le thème de la Guerre des étoiles comparant différents langages de programmation. L'image est divisée en trois sections, chacune montrant un personnage de Star Wars brandissant un sabre laser. À gauche, Luke Skywalker, avec un logo de langage de programmation « R », tient un sabre laser bleu. Au centre, Kylo Ren brandit un sabre laser rouge à garde transversale portant le logo GraphPad. À droite, Mace Windu, associé au logo Python, tient un sabre laser violet. Ce mème dépeint avec humour les rôles perçus des logiciels libres dans le paysage de la recherche."><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -968,7 +953,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/R-studio_Screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/R-studio_Screen.jpg" alt="Capture d’écran d’une session RStudio affichant un carnet d’analyse de données Quarto." width="500" height="300"></p>
 <figcaption>Écran R-Studio/Quarto</figcaption>
 </figure>
 </div>
@@ -979,7 +964,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/GitHub_screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/GitHub_screen.jpg" alt="Capture d’écran d’un dépôt GitHub nommé 'Stroke_PDGRF-B_Reactivity,' issu d’un fork de 'elalilab/Stroke_PDGRF-B_Reactivity.' Le dépôt est public et contient des répertoires tels que 'Data_Processed' ainsi que plusieurs fichiers Quarto Markdown (`.qmd`) liés à l’analyse de données" width="500" height="300"></p>
 <figcaption>Écran GitHub</figcaption>
 </figure>
 </div>
@@ -1000,7 +985,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/R-studio_Screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/R-studio_Screen.jpg" alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." width="500" height="300"></p>
 <figcaption>Écran R-Studio/Quarto</figcaption>
 </figure>
 </div>
@@ -1032,7 +1017,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/GitHub_screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/GitHub_screen.jpg" alt="Capture d’écran d’un dépôt GitHub nommé 'Stroke_PDGRF-B_Reactivity,' issu d’un fork de 'elalilab/Stroke_PDGRF-B_Reactivity.' Le dépôt est public et contient des répertoires tels que 'Data_Processed' ainsi que plusieurs fichiers Quarto Markdown (`.qmd`) liés à l’analyse de données" width="500" height="300"></p>
 <figcaption>Écran GitHub</figcaption>
 </figure>
 </div>
@@ -1063,7 +1048,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Rladies_Logo.png" width="300" height="300"></p>
+<p><img data-src="images/Rladies_logo.png" alt="Logo de R-Ladies, une organisation mondiale qui promeut la diversité des genres dans la communauté du langage de programmation R. Le logo présente un 'R' stylisé en gris à l’arrière-plan, similaire au logo officiel du langage R, avec un 'R' violet en premier plan. En dessous, le mot 'Ladies' est écrit en gris. Ce logo symbolise une communauté inclusive et solidaire pour les femmes et les minorités de genre en science des données et en programmation avec R." width="300" height="300"></p>
 <figcaption><a href="https://github.com/rladies">R Ladies</a></figcaption>
 </figure>
 </div>
@@ -1073,7 +1058,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pyladies_logo.png" width="300" height="300"></p>
+<p><img data-src="images/pyladies_logo.png" alt="Logo de PyLadies, une organisation internationale qui promeut la diversité des genres dans la communauté du langage de programmation Python. Le logo représente une illustration stylisée d’une femme aux cheveux rouges, portant des lunettes noires et ayant des yeux expressifs avec de longs cils. Sous le visage, le mot 'pyladies' est écrit en police cursive de couleur crème sur une bannière rouge. Ce logo symbolise une communauté inclusive et solidaire pour les femmes et les minorités de genre en programmation Python et en science des données." width="300" height="300"></p>
 <figcaption><a href="https://github.com/pyladies">Py Ladies</a></figcaption>
 </figure>
 </div>
@@ -1132,7 +1117,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/scripts_processing.png" style="width:90.0%"></p>
+<p><img data-src="images/scripts_processing.png" style="width:90.0%" alt="Capture d'écran d'un répertoire structuré contenant des données d'analyse organisées."></p>
 <figcaption>Arborescence des dossiers</figcaption>
 </figure>
 </div>
@@ -1178,7 +1163,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/output.png" style="width:100.0%"></p>
+<p><img data-src="images/output.png" style="width:100.0%" alt="Une capture d'écran d'un répertoire structuré contenant des figures/tracés scientifiques"></p>
 <figcaption>Arborescence des dossiers</figcaption>
 </figure>
 </div>
@@ -1228,7 +1213,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center; font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/readme.webp" width="700" height="300"></p>
+<p><img data-src="images/readme.webp" alt="Capture d’écran d’un fichier README sur GitHub pour le 'Bootstrap Ruby Gem,' une bibliothèque utilisée dans les applications Ruby on Rails. Le README affiche un badge indiquant que la construction du gem est réussie et que la version 4.1.1 est disponible. Le document fournit des instructions d’installation, expliquant comment ajouter le gem au fichier Gemfile et assurer la compatibilité avec 'sprockets-rails.' Le guide fait référence à différents environnements, notamment Ruby on Rails et d’autres frameworks Ruby. La page contient des extraits de code formatés pour faciliter l’intégration dans un projet Rails." width="700" height="300"></p>
 <figcaption>Source : https://github.com/twbs/bootstrap-rubygem</figcaption>
 </figure>
 </div>
@@ -1347,7 +1332,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Presentation_QR-code.png" width="200" height="200"></p>
+<p><img data-src="images/Presentation_QR-code.png" alt="Une image de code QR qui redirige vers la présentation située dans un dépôt GitHub." width="200" height="200"></p>
 <figcaption>Cette présentation est disponible <a href="https://github.com/Alliance-RDM-GDR/RDM_OrganizeData">ici</a> (en anglais ou en français)</figcaption>
 </figure>
 </div>

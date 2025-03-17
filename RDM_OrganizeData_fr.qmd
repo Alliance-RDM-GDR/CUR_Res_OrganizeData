@@ -59,44 +59,41 @@ Essayez de vous mettre à la place d’un [observateur externe]{style="color:gre
 
 :::: {#second-column}
 ::: {style="text-align: center; font-size: 70%"}
-![Les autres ne comprennent généralement pas les données de recherche](images/DificultData.webp){fig-align="center" width="400" height="400"}
+![Les autres ne comprennent généralement pas les données de recherche](images/DificultData.webp){fig-alt="Une illustration en noir et blanc représentant une personne frustrée, tenant sa tête et entourée de points d'interrogation. La personne est assise à une table couverte de grandes feuilles de calcul désorganisées, remplies de chiffres et de texte, symbolisant la difficulté à gérer et comprendre les données de recherche." fig-align="center" width="400" height="400"}
 :::
 ::::
 :::::
 
-## Quatre principes pour organiser un ensemble de données
+## 1. Utilisez conventions de nommage{.center}
 
-:::{style="text-align: left;font-size: 70%"}
-1.  Utilisez des [conventions de nommage](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :
+Utilisez des [conventions de nommage](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :
 
 -   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Jour_Condition_Marqueur.tif]{style="color:green;"}
 -   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Comptes.csv]{style="color:green;"}
 
-2.  Utilisez des [formats de fichiers appropriés, ouverts et accessibles]{style="color:green;"} [(lien)](https://osf.io/ena5p) pour améliorer l’accessibilité :
+## 2. Prioriser formats de fichiers ouverts{.center}
+
+Utilisez des [formats de fichiers appropriés, ouverts et accessibles]{style="color:green;"} [(lien)](https://osf.io/ena5p) pour améliorer l’accessibilité :
 
 -   {{< bi card-image>}} [.tif]{style="color:green;"} pour les images (préserve les métadonnées).
 -   {{< bi file-earmark-spreadsheet>}} [.csv]{style="color:green;"} pour les tableaux (format non propriétaire).
 -   {{< bi file-bar-graph-fill>}} [.png ou .svg]{style="color:green;"} pour les graphiques (préserve la qualité).
 -   {{< bi file-earmark-pdf-fill>}} [.txt ou .pdf]{style="color:green;"} pour la documentation (format non propriétaire).
-:::
 
-## Quatre bonnes pratiques pour organiser un ensemble de données
 
-::::: {layout-ncol="2"}
-:::: {#first-column}
-:::{style="text-align: left;font-size: 70%"}
-3.  Utilisez des [métadonnées détaillées]{style="color:green;"} (fichiers README et dictionnaires de données/codebook) pour [contextualiser]{style="text-decoration: underline;"} et [décrire]{style="text-decoration: underline;"} les fichiers de recherche.
+## 3. Fournir des métadonnées complètes{.center}
 
-4.  Mettez en place des [flux de travail reproductibles]{style="color:green;"} en utilisant le codage (R, Python) pour transformer les [données brutes]{style="text-decoration: underline;"} en données destinées à l’[analyse]{style="text-decoration: underline;"}.
-:::
-::::
+Utilisez des [métadonnées détaillées]{style="color:green;"} (fichiers README et dictionnaires de données/codebook) pour [contextualiser]{style="text-decoration: underline;"} et [décrire]{style="text-decoration: underline;"} les fichiers de recherche.
 
-:::: {#second-column}
 ::: {style="text-align: center; font-size: 70%"}
-![Exemple de codebook (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-align="center" width="400" height="250"}
+![Exemple de codebook (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-alt="Un tableau présentant un codebook pour un ensemble de données, avec des colonnes intitulées 'Nom de variable,' 'Description,' 'Type,' et 'Valeurs ou caractéristiques.' Le tableau définit des variables telles que l'identifiant du patient, le sexe, la date de la procédure, le groupe de traitement et les résultats cliniques, en précisant les types de données (numérique, date, caractère) et les significations des valeurs (ex. 1=Femme, 2=Homme). Ce codebook fournit une vue d'ensemble structurée des variables utilisées dans la gestion des données de recherche." fig-align="center" width="400" height="250"}
 :::
-::::
-:::::
+
+## 4. Mettre en œuvre des flux de travail reproductibles{.center}
+
+Mettez en place des [flux de travail reproductibles]{style="color:green;"} en utilisant le codage (R, Python) pour transformer les [données brutes]{style="text-decoration: underline;"} en données destinées à l’[analyse]{style="text-decoration: underline;"}.
+
+
 
 ::: callout-tip
 Ces pratiques garantissent des ensembles de données [organisés, propres et validés]{style="color:green;"}.
@@ -114,13 +111,13 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Source : https://dansteer.wordpress.com/](images/BadTable1.webp){fig-align="center" width="600" height="300"}
+![Source : https://dansteer.wordpress.com/](images/BadTable1.webp){fig-alt="Exemple de mauvais formatage de données, illustrant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne." fig-align="center" width="600" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Avec l'aimable autorisation d'un chercheur](images/BadTable2.png){fig-align="center" width="600" height="300"}
+![Avec l'aimable autorisation d'un chercheur](images/BadTable2.png){fig-alt="Exemple de mauvais formatage des données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. On peut également observer une combinaison de chiffres et de données numériques dans la même feuille." fig-align="center" width="600" height="300"}
 :::
 ::::
 :::::
@@ -130,33 +127,34 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-alt="Exemple de mauvais formatage de données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. On peut également observer une combinaison de chiffres et de données numériques dans la même feuille." fig-align="center" width="400" height="400"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-alt="Exemple de mauvais formatage de données, présentant une feuille de calcul avec des cellules combinées et des variables différentes dans la même colonne. Nous voyons également des codes de couleur qui ne doivent pas être définis dans une feuille de calcul de données." fig-align="center" width="400" height="400"}
 :::
 ::::
 :::::
 
-## Exemples de Crystal Lewis (2024) {.center}
+## Exemples de Crystal Lewis (2024){.center}
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG){fig-alt="Deux tableaux comparant des structures de données. Le tableau de gauche, intitulé 'Pas un rectangle,' présente une structure irrégulière avec un alignement incohérent des noms de variables et des valeurs, rendant son interprétation difficile. Le tableau de droite, intitulé 'Rectangle,' suit un format structuré avec des colonnes clairement définies pour l'ID étudiant, l'âge en mois, le score brut de lecture et le score standardisé de lecture. Cette comparaison met en évidence l'importance d'un format de données bien organisé pour la gestion des données de recherche."}
 
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG){fig-alt="Deux tableaux comparant la cohérence des valeurs de colonnes. Le tableau de gauche, intitulé 'Valeurs de colonnes incohérentes,' contient des formats de date variés (ex. '10-12-2023,' 'Oct. 15, 2023,' 'September 15') et des valeurs catégoriques incohérentes pour l'achèvement du sondage ('y,' 'Yes,' 'Y,' 'no'). Le tableau de droite, intitulé 'Valeurs de colonnes cohérentes,' normalise les dates au format 'AAAA-MM-JJ' et unifie les réponses catégoriques en 'y' et 'n.' Cette comparaison illustre les meilleures pratiques pour garantir la clarté et la fiabilité des données."}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG){fig-alt="Deux tableaux comparant les formats de variables. Le tableau de gauche, intitulé 'Variable de type caractère,' contient des valeurs d'âge incohérentes : un espace avant '24' fait de cette entrée un texte, '49 years old' ajoute du texte inutile, et '36..0' contient une erreur de formatage. Le tableau de droite, intitulé 'Variable numérique,' stocke correctement les âges sous forme numérique sans espace, texte superflu ou erreurs de formatage. Cette comparaison met en évidence l'importance du nettoyage des données numériques pour une analyse correcte."}
 
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG){fig-alt="Deux tableaux comparant la structuration des données. Le tableau de gauche, intitulé 'Deux informations dans une seule variable,' combine le nombre d'incidents et le nombre total d'inscrits en une seule colonne (ex. '55/250'), rendant l'analyse plus difficile. Le tableau de droite, intitulé 'Deux informations dans deux variables,' sépare ces valeurs en colonnes distinctes : 'incident' pour le nombre d'incidents et 'enrollment' pour le nombre d'inscrits. Cette structuration facilite l'analyse et suit les bonnes pratiques de gestion des données."}
+
 :::
 ::::
 :::::
@@ -164,11 +162,11 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ## Exemples de Crystal Lewis (2024)
 
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-align="center" width="500" height="200"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-alt="Deux tableaux comparant l'utilisation de valeurs explicites et implicites. Le tableau de gauche, intitulé 'Valeurs non explicites,' omet la répétition des identifiants d'école et des années, supposant qu'ils s'appliquent à plusieurs lignes, ce qui peut causer des erreurs lors du traitement des données. Le tableau de droite, intitulé 'Valeurs explicites,' répète ces informations pour chaque ligne, garantissant une clarté accrue et une meilleure lisibilité pour l'analyse." fig-align="center" width="500" height="200"}
 :::
 
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-align="center" width="600" height="200"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-alt="Deux tableaux comparant l'utilisation explicite et implicite des variables. Le tableau de gauche, intitulé 'Variables non explicites,' utilise la couleur des cellules pour indiquer les conditions de traitement, ce qui peut être mal interprété ou perdu dans l'analyse. Le tableau de droite, intitulé 'Variables explicites,' ajoute une colonne 'treatment' avec des valeurs numériques (0 ou 1) pour indiquer explicitement la condition de traitement. Cette approche garantit une meilleure transparence des données et facilite leur analyse." fig-align="center" width="600" height="200"}
 :::
 
 
@@ -177,7 +175,7 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Un tableau de données typique au format long organise l'information en lignes et colonnes](images/GoodTable.png){fig-align="left" width="500" height="300"}
+![Un tableau de données typique au format long organise l'information en lignes et colonnes](images/GoodTable.png){fig-alt="Un tableau bien structuré affichant des données expérimentales pour différentes souris. Les colonnes incluent 'MouseID,' 'DPI' (jours après la lésion), 'Condition' (MCAO), 'Région' (Contra, Ipsi, Peri), ainsi que les comptages cellulaires pour NeuN, Ki67 et BrdU. La colonne 'MouseID' est surlignée en orange pour la distinguer visuellement. Ce tableau illustre une organisation claire des données, essentielle pour leur analyse en recherche." fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -199,7 +197,7 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Un tableau de données typique au format large, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-align="left" width="600" height="350"}
+![Un tableau de données typique au format large, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-alt="Un diagramme illustrant la transformation entre les formats de données long et large. Le tableau de gauche représente un format long où chaque ligne contient un 'pays,' une 'année' et une valeur associée. Le tableau de droite montre le format large, où les années sont réparties sur plusieurs colonnes (ex. 'yr1960', 'yr1970', 'yr2010'). La fonction `pivot_wider()` transforme les données en format large, tandis que `pivot_longer()` effectue l'opération inverse, facilitant l'analyse des données longitudinales." fig-align="left" width="600" height="350"}
 :::
 ::::
 
@@ -221,7 +219,7 @@ Ici, les colonnes représentent des [réponses ou prédicteurs]{style="color:gre
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Un tableau de données typique au format long, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-align="left" width="700" height="300"}
+![Un tableau de données typique au format long, extrait de Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-alt="Diagramme illustrant la transformation de données longitudinales de tableaux séparés en un format long. Les tableaux du haut et du bas représentent les « données de la première vague » et les « données de la deuxième vague », chacune contenant les mesures de l'anxiété (« anx1 » et “anx2”) pour les étudiants identifiés par « stu_id ». Le tableau de droite, intitulé « Long format data », restructure les données en ajoutant une colonne « vague », chaque ligne représentant les mesures d'un étudiant à une vague spécifique. Cette transformation optimise l'ensemble des données pour une analyse longitudinale et un stockage efficace." fig-align="left" width="700" height="300"}
 :::
 ::::
 
@@ -247,7 +245,7 @@ Le format long est généralement privilégié pour l’analyse des données.
 Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convertir un tableau du format long au format large, et inversement. [Tutoriel](https://shanghai.hosting.nyu.edu/data/r/reshaping.html).   
 
 ::: {style="text-align: center;font-size: 60%"} 
-![Conversion format long à large (https://tavareshugo.github.io/)](images/LongToWide.PNG){fig-align="center" width="600" height="350"}
+![Conversion format long à large (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagramme illustrant la transformation entre les formats de données long et large en utilisant `pivot_wider()` et `pivot_longer()`. Le tableau de gauche représente des données au format long, où chaque ligne contient un « pays », une “année” et une valeur « métrique » correspondante. Le tableau de droite représente des données au format large, où les valeurs de l'année sont réparties sur plusieurs colonnes (par exemple, “yr1960”, “yr1970”, “yr2010”), chacune contenant la valeur métrique correspondante pour chaque pays. La fonction `pivot_wider()` convertit le format long en format large, tandis que `pivot_longer()` inverse le processus, démontrant ainsi la flexibilité de la mise en forme des données dans R." fig-align="center" width="600" height="350"}
 :::
 
 
@@ -256,13 +254,13 @@ Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convert
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 80%"} 
-- Les ensembles de données sont [incompréhensibles]{style="color:red;"} s’ils ne sont pas accompagnés de dictionnaires de données ou de codebooks ([(.txt, .md, .csv)]{style="color:green;"}) décrivant les [variables]{style="color:green;"} des tableaux de données. Cela peut également prendre la forme d’un [fichier README]{style="color:green;"} [(.txt, .md)]{style="color:green;"} qui décrit leur contexte et leur contenu.
+- Les ensembles de données sont [incompréhensibles]{style="color:red;"} s’ils ne sont pas accompagnés de dictionnaires de données ou de codebooks [(.txt, .md, .csv)]{style="color:green;"} décrivant les [variables]{style="color:green;"} des tableaux de données. Cela peut également prendre la forme d’un [fichier README]{style="color:green;"} [(.txt, .md)]{style="color:green;"} qui décrit leur contexte et leur contenu.
 :::
 ::::
 
 ::::{#second-column}
 ::: {style="text-align: center;font-size: 70%"} 
-![Exemple de fichier README](images/DescriptiveMetadata_czi.png){fig-align="center" width="600" height="500"}
+![Exemple de fichier README](images/DescriptiveMetadata_czi.png){fig-alt="Une capture d'écran de métadonnées descriptives pour un ensemble de données sur la réactivité des cellules PDGFR-B+ dans un modèle murin d'ischémie cérébrale. Le texte détaille l'origine des images, les conventions de nommage des fichiers, le contenu des dossiers et les conditions expérimentales. Il explique également le processus de génération des images à partir des fichiers Zenodo, leur traitement avec CellProfiler et fournit des liens vers des articles de recherche et des dépôts OSF pour plus d’informations." fig-align="center" width="600" height="500"}
 :::
 ::::
 :::::
@@ -274,7 +272,7 @@ Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convert
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-align="center" width="500" height="250"}
+![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-alt="Image de microscopie à fluorescence d'une section coronale de cerveau de souris. La section est marquée par des marqueurs d’immunofluorescence" fig-align="center" width="500" height="250"}
 :::
 ::::
 
@@ -297,7 +295,7 @@ Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Script FIJI pour enregistrer des images .czi en tiff. Extrait de Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
+![Script FIJI pour enregistrer des images .czi en tiff. Extrait de Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-alt="Capture d’écran d’un script macro ImageJ écrit en JavaScript. Le script automatise la conversion des fichiers d’imagerie microscopique `.czi` en format `.tif`. Il demande à l’utilisateur de sélectionner un répertoire, récupère la liste des fichiers `.czi`, et traite chaque fichier en l’ouvrant avec le Bio-Formats Importer. Il extrait ensuite deux canaux d’image et les enregistre séparément en tant que fichiers `.tif` dans un dossier 'Images_Tiff'. Le script garantit un traitement systématique de tous les fichiers et ferme toutes les fenêtres après l’exécution." fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -320,7 +318,7 @@ Enregistrer des images .czi en .tif avec FIJI entraîne une [perte de métadonn�
 Exportez les métadonnées techniques des images propriétaires (ex. .czi) en fichiers [.txt ou .csv]{style="color:green;"} (cela peut être appliqué à toutes les images d'un lot).  
 
 ::: {style="text-align: center;font-size: 70%"} 
-![Exemple de métadonnées techniques dans FIJI : *image -> show info*](images/TechnicalMetadata_czi.png){fig-align="center" width="300" height="300"}
+![Exemple de métadonnées techniques dans FIJI : *image -> show info*](images/TechnicalMetadata_czi.png){fig-alt="Capture d’écran de la visionneuse de métadonnées affichant les métadonnées techniques d’un fichier d’imagerie microscopique `.czi`. Le tableau des métadonnées comprend des clés et des valeurs telles que 'BitsPerPixel' (14), 'DimensionOrder' (XYZCT), et 'PixelType' (uint16). D’autres détails indiquent que l’image contient 4 canaux (SizeC), un seul point temporel (SizeT = 1), des dimensions de 2752x2208 pixels (SizeX, SizeY), et un seul plan Z (SizeZ = 1). Ces métadonnées fournissent des informations essentielles pour le traitement et l’analyse d’images en microscopie de recherche." fig-align="center" width="300" height="300"}
 :::
 ::::
 
@@ -330,7 +328,7 @@ Exportez les métadonnées techniques des images propriétaires (ex. .czi) en fi
 Générez des fichiers README descriptifs pour expliquer la [provenance et les conventions de nommage]{style="color:green;"} des images.
 
 ::: {style="text-align: center;font-size: 70%"} 
-![Exemple de [métadonnées descriptives](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-align="center" width="400" height="330"}
+![Exemple de [métadonnées descriptives](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-alt="Une capture d'écran de métadonnées descriptives pour un ensemble de données sur la réactivité des cellules PDGFR-B+ dans un modèle murin d'ischémie cérébrale. Le texte détaille l'origine des images, les conventions de nommage des fichiers, le contenu des dossiers et les conditions expérimentales. Il explique également le processus de génération des images à partir des fichiers Zenodo, leur traitement avec CellProfiler et fournit des liens vers des articles de recherche et des dépôts OSF pour plus d’informations." fig-align="center" width="400" height="330"}
 :::
 ::::
 :::::
@@ -345,7 +343,7 @@ Nous vivons une pandémie de [science frauduleuse et irréproducible]{style="col
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 60%"} 
-![Augmentation du nombre d'articles rétractés au cours des trois dernières décennies](images/Economist_Retractions.png){fig-align="left" width="450" height="450"}
+![Augmentation du nombre d'articles rétractés au cours des trois dernières décennies](images/Economist_Retractions.png){fig-alt="Un graphique de The Economist intitulé 'Pants on fire,' illustrant le nombre cumulé d’articles scientifiques biomédicaux rétractés de 1996 à 2023. Le graphique montre une augmentation exponentielle des rétractations, dépassant 15 000 en 2023. Les données proviennent de Retraction Watch et couvrent 4 244 revues évaluées. Ce graphique met en évidence les préoccupations croissantes concernant l'intégrité scientifique et l'augmentation du nombre de publications rétractées au fil du temps." fig-align="left" width="450" height="450"}
 :::
 ::::
 
@@ -364,13 +362,13 @@ Un [ensemble de données structuré]{style="color:green;"} est la clé pour le c
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 70%"}
-![Source : pexels.com](images/Matryoska.jpeg)
+![Source : pexels.com](images/Matryoska.jpeg){fig-alt="Un étalage de poupées russes traditionnelles Matriochkas, également appelées poupées gigognes, peintes dans des couleurs vives."}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 70%"}
-![Structure des fichiers](images/files.png){width="75%"}
+![Structure des fichiers](images/files.png){fig-alt="Un arbre de répertoires structuré représentant un projet de recherche organisé. Les dossiers de premier niveau incluent 'Code,' contenant des scripts R pour le nettoyage et l'analyse des données ('clean_raw_data.r,' 'analysis_1.r,' 'analysis_2.r'); 'Data,' divisé en 'Raw_data' (avec les fichiers bruts 'file_a.raw' et 'file_b.raw') et 'Processed_data' (contenant les fichiers CSV nettoyés 'file_a.csv' et 'file_b.csv'); 'Outputs,' qui comprend des sous-dossiers pour 'Figures' et 'Models'; ainsi qu'un fichier 'README.txt'. Cette organisation suit les bonnes pratiques pour la gestion des données de recherche." width="75%"}
 :::
 ::::
 :::::
@@ -403,7 +401,7 @@ Dans l’ensemble, assurez-vous que la structure des données est [logique et co
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/tier.png){width="40%"}
+![Arborescence des dossiers](images/tier.png){fig-alt="Une structure de répertoires hiérarchique suivant le protocole TIER 4.0 pour l'organisation des données de recherche. Le dossier racine 'Project/' contient des documents clés tels que 'The Read Me File' et 'The Report.' Le dossier 'Data/' est divisé en 'InputData/' (avec les sous-dossiers 'Input Data Files' et 'Metadata,' incluant 'Data Sources Guide' et 'Codebooks'), 'AnalysisData/' (avec 'Analysis Data Files' et 'The Data Appendix') et 'IntermediateData/'. Le dossier 'Scripts/' comprend des sous-dossiers pour 'ProcessingScripts/', 'DataAppendixScripts/', 'AnalysisScripts/', ainsi que 'The Master Script.' Enfin, le dossier 'Output/' contient 'DataAppendixOutput' et 'Results.' Cette organisation garantit la transparence et la reproductibilité dans la gestion des données de recherche." width="40%"}
 :::
 ::::
 :::::
@@ -422,7 +420,7 @@ Un dossier [Data_Raw/]{style="color:orange;"} peut contenir :
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/data_raw.png){width="90%"}
+![Arborescence des dossiers](images/data_raw.png){fig-alt="Capture d'écran d'un répertoire structuré contenant des données organisées." width="90%"}
 :::
 ::::
 :::::
@@ -438,7 +436,7 @@ Incluez des [métadonnées/]{style="color:orange;"} permettant de comprendre et 
 
 - {{< bi filetype-tiff >}} Paramètres d’instrumentation et d’acquisition pour les images.
 
-## {{< bi folder-fill >}} Données d’analyse (traitées) {.center}
+## {{< bi folder-fill >}} Données d’analyse (traitées){.center}
 
 Un dossier [Data_Analysis/]{style="color:orange;"} contient des [fichiers traités]{style="color:green;"} utilisés pour générer les résultats de la recherche.
 
@@ -453,12 +451,12 @@ Un dossier [Data_Analysis/]{style="color:orange;"} contient des [fichiers trait�
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/data_processed.png){width="90%"}
+![Arborescence des dossiers](images/data_processed.png){fig-alt="Capture d'écran d'un répertoire structuré contenant des données traitées organisées." width="90%"}
 :::
 ::::
 :::::
 
-## {{< bi folder-fill >}} Données intermédiaires (optionnel) {.center}
+## {{< bi folder-fill >}} Données intermédiaires (optionnel){.center}
 
 Un dossier [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} peut contenir des données intermédiaires traitées ou des fichiers prétraités dans le cadre d’un pipeline d’analyse. Par exemple, des "masques" d’image et des classificateurs d’apprentissage automatique utilisés pour un traitement ultérieur des images.
 
@@ -469,7 +467,7 @@ Un dossier [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} pe
 Bien que la plupart des scientifiques soient plus à l’aise avec les interfaces graphiques (GUI), le paysage actuel de la recherche exige l'utilisation de [scripts et de code]{style="color:green;"} pour garantir la reproductibilité des résultats scientifiques.
 :::
 
-![](images/Theway.png){fig-align="center"}
+![](images/Theway.png){fig-alt="Un mème humoristique sur le thème de la Guerre des étoiles comparant différents langages de programmation. L'image est divisée en trois sections, chacune montrant un personnage de Star Wars brandissant un sabre laser. À gauche, Luke Skywalker, avec un logo de langage de programmation « R », tient un sabre laser bleu. Au centre, Kylo Ren brandit un sabre laser rouge à garde transversale portant le logo GraphPad. À droite, Mace Windu, associé au logo Python, tient un sabre laser violet. Ce mème dépeint avec humour les rôles perçus des logiciels libres dans le paysage de la recherche." fig-align="center"}
 
 ::: callout-tip
 {{< bi code-square >}} Le codage doit être considéré comme une [compétence essentielle]{style="color:green;"} au même titre que d’autres méthodes de recherche.
@@ -482,14 +480,14 @@ Bien que la plupart des scientifiques soient plus à l’aise avec les interface
 
 ### {{< bi code-square>}} R-Studio/Quarto (R + Python)
 ::: {style="text-align: center;font-size: 100%"} 
-![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-alt="Capture d’écran d’une session RStudio affichant un carnet d’analyse de données Quarto." fig-align="center" width="500" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ### {{< bi github>}} GitHub (Contrôle de version)
 ::: {style="text-align: center;font-size: 100%"} 
-![Écran GitHub](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+![Écran GitHub](images/GitHub_screen.jpg){fig-alt="Capture d’écran d’un dépôt GitHub nommé 'Stroke_PDGRF-B_Reactivity,' issu d’un fork de 'elalilab/Stroke_PDGRF-B_Reactivity.' Le dépôt est public et contient des répertoires tels que 'Data_Processed' ainsi que plusieurs fichiers Quarto Markdown (`.qmd`) liés à l’analyse de données" fig-align="center" width="500" height="300"}
 :::
 ::::
 :::::
@@ -501,7 +499,7 @@ Bien que la plupart des scientifiques soient plus à l’aise avec les interface
 
 ### {{< bi code-square>}} R-Studio/Quarto (R + Python)
 ::: {style="text-align: center;font-size: 100%"} 
-![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+![Écran R-Studio/Quarto](images/R-studio_Screen.jpg){fig-alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." fig-align="center" width="500" height="300"}
 :::
 ::::
 
@@ -527,7 +525,7 @@ Bien que la plupart des scientifiques soient plus à l’aise avec les interface
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![Écran GitHub](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+![Écran GitHub](images/GitHub_screen.jpg){fig-alt="Capture d’écran d’un dépôt GitHub nommé 'Stroke_PDGRF-B_Reactivity,' issu d’un fork de 'elalilab/Stroke_PDGRF-B_Reactivity.' Le dépôt est public et contient des répertoires tels que 'Data_Processed' ainsi que plusieurs fichiers Quarto Markdown (`.qmd`) liés à l’analyse de données" fig-align="center" width="500" height="300"}
 :::
 ::::
 
@@ -552,13 +550,13 @@ Avec [GitHub]{style="color:magenta;"} {{< bi github>}} ou [GitLab]{style="color:
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![[R Ladies](https://github.com/rladies)](images/Rladies_Logo.png){fig-align="center" width="300" height="300"}
+![[R Ladies](https://github.com/rladies)](images/Rladies_logo.png){fig-alt="Logo de R-Ladies, une organisation mondiale qui promeut la diversité des genres dans la communauté du langage de programmation R. Le logo présente un 'R' stylisé en gris à l’arrière-plan, similaire au logo officiel du langage R, avec un 'R' violet en premier plan. En dessous, le mot 'Ladies' est écrit en gris. Ce logo symbolise une communauté inclusive et solidaire pour les femmes et les minorités de genre en science des données et en programmation avec R." fig-align="center" width="300" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-align="center" width="300" height="300"}
+![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-alt="Logo de PyLadies, une organisation internationale qui promeut la diversité des genres dans la communauté du langage de programmation Python. Le logo représente une illustration stylisée d’une femme aux cheveux rouges, portant des lunettes noires et ayant des yeux expressifs avec de longs cils. Sous le visage, le mot 'pyladies' est écrit en police cursive de couleur crème sur une bannière rouge. Ce logo symbolise une communauté inclusive et solidaire pour les femmes et les minorités de genre en programmation Python et en science des données." fig-align="center" width="300" height="300"}
 :::
 ::::
 :::::
@@ -598,7 +596,7 @@ Le dossier [Scripts_Analysis]{style="color:orange;"} contient le code permettant
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/scripts_processing.png){width="90%"}
+![Arborescence des dossiers](images/scripts_processing.png){fig-alt="Capture d'écran d'un répertoire structuré contenant des données d'analyse organisées." width="90%"}
 :::
 ::::
 :::::
@@ -627,7 +625,7 @@ Le dossier [Results/]{style="color:orange;"} contient les fichiers générés pa
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/output.png){width="100%"}
+![Arborescence des dossiers](images/output.png){fig-alt="Une capture d'écran d'un répertoire structuré contenant des figures/tracés scientifiques" width="100%"}
 :::
 ::::
 :::::
@@ -642,7 +640,7 @@ Les [fichiers README]{style="color:green;"} sont des guides pour [comprendre les
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center; font-size: 50%"}
-![Source : https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="700" height="300"}
+![Source : https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-alt="Capture d’écran d’un fichier README sur GitHub pour le 'Bootstrap Ruby Gem,' une bibliothèque utilisée dans les applications Ruby on Rails. Le README affiche un badge indiquant que la construction du gem est réussie et que la version 4.1.1 est disponible. Le document fournit des instructions d’installation, expliquant comment ajouter le gem au fichier Gemfile et assurer la compatibilité avec 'sprockets-rails.' Le guide fait référence à différents environnements, notamment Ruby on Rails et d’autres frameworks Ruby. La page contient des extraits de code formatés pour faciliter l’intégration dans un projet Rails." fig-align="center" width="700" height="300"}
 :::
 ::::
 
@@ -714,7 +712,7 @@ Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_DepositingDa
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 100%"}
-![Cette présentation est disponible [ici](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData) (en anglais ou en français)](images/Presentation_QR-code.png){fig-align="center" width="200" height="200"}
+![Cette présentation est disponible [ici](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData) (en anglais ou en français)](images/Presentation_QR-code.png){fig-alt="Une image de code QR qui redirige vers la présentation située dans un dépôt GitHub." fig-align="center" width="200" height="200"}
 :::
 ::::
 :::::

@@ -172,7 +172,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -183,7 +183,7 @@ Daniel Manrique-Castano, Ph.D
 
 </div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
+<div class="quarto-layout-row quarto-layout-valign-center">
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div style="text-align: left;font-size: 80%">
 <p>Research data comes in many tastes and shapes (<span style="color:orange;">tables</span>, <span style="color:magenta;">images</span>, <span style="color:red;">videos</span>, <span style="color:gray;">text</span>).</p>
@@ -207,7 +207,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center; font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DificultData.webp" width="500" height="500"></p>
+<p><img data-src="images/DificultData.webp" alt="A black-and-white cartoon illustration of a frustrated person holding their head, surrounded by question marks. The person is sitting at a table covered with large, disorganized spreadsheets filled with numbers and text, symbolizing the challenge of managing and understanding research data." width="450" height="450"></p>
 <figcaption>Others generally do not understand research data</figcaption>
 </figure>
 </div>
@@ -216,54 +216,39 @@ Daniel Manrique-Castano, Ph.D
 </div>
 </div>
 </section>
-<section id="four-principles-for-organizing-a-dataset" class="slide level2">
-<h2>Four principles for organizing a dataset</h2>
-<div style="text-align: left;font-size: 80%">
-<ol type="1">
-<li>Use consistent <a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">naming conventions</a> that fairly describe file’s content and allow interrelation between files:</li>
-</ol>
+<section id="use-naming-conventions" class="slide level2 center">
+<h2>1. Use naming conventions</h2>
+<p>Use consistent <a href="https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions">naming conventions</a> that fairly describe file’s content and allow interrelation between files:</p>
 <ul>
 <li><i class="bi-card-image " style="" role="img" aria-hidden="true"></i> <span style="color:red;">A1.tif</span> <i class="bi-arrow-right " style="" role="img" aria-hidden="true"></i> <span style="color:green;">Exp_MouseID_Day_Condition_Marker.tif</span></li>
 <li><i class="bi-file-earmark-spreadsheet " style="" role="img" aria-hidden="true"></i> <span style="color:red;">CellsTable.xls</span> <i class="bi-arrow-right " style="" role="img" aria-hidden="true"></i> <span style="color:green;">Widefield_5x_Cortex_NeuN_Counts.csv</span></li>
 </ul>
-<ol start="2" type="1">
-<li>Use <span style="color:green;">proper, open/accessible</span> <a href="https://osf.io/ena5p">file formats</a> to improve accessibility:</li>
-</ol>
+</section>
+<section id="prioritize-open-file-formats" class="slide level2 center">
+<h2>2. Prioritize open file formats</h2>
+<p>Use <span style="color:green;">proper, open/accessible</span> <a href="https://osf.io/ena5p">file formats</a> to improve accessibility:</p>
 <ul>
 <li><i class="bi-card-image " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.tif</span> for images (preserve the metadata).</li>
 <li><i class="bi-file-earmark-spreadsheet " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.csv</span> for tables (non-proprietary).</li>
 <li><i class="bi-file-bar-graph-fill " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.png or .svg</span> for graphs (preserves quality).</li>
 <li><i class="bi-file-earmark-pdf-fill " style="" role="img" aria-hidden="true"></i> <span style="color:green;">.txt or .pdf</span> for documentation (non-proprietary).</li>
 </ul>
-</div>
 </section>
-<section id="four-best-practices-for-organizing-a-dataset" class="slide level2">
-<h2>Four best practices for organizing a dataset</h2>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div style="text-align: left;font-size: 80%">
-<ol start="3" type="1">
-<li><p>Use <span style="color:green;">comprehensive metadata</span> (README files and data dictionaries/codebook) to <span style="text-decoration: underline;">contextualize</span> and <span style="text-decoration: underline;">describe</span> research files.</p></li>
-<li><p>Implement <span style="color:green;">reproducible workflows</span> using coding (R, Python) to transform <span style="text-decoration: underline;">raw data</span> into data for <span style="text-decoration: underline;">analysis</span>.</p></li>
-</ol>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="provide-comprehensive-metadata" class="slide level2 center">
+<h2>3. Provide comprehensive metadata</h2>
+<p>Use <span style="color:green;">comprehensive metadata</span> (README files and data dictionaries/codebook) to <span style="text-decoration: underline;">contextualize</span> and <span style="text-decoration: underline;">describe</span> research files.</p>
 <div style="text-align: center; font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Codebook.jpg" width="500" height="300"></p>
+<p><img data-src="images/Codebook.jpg" alt="A table displaying a codebook for a dataset, with columns labeled 'Variable Name,' 'Description,' 'Type,' and 'Values or Characteristics.' The table defines variables such as patient ID, gender, procedure date, treatment group, and clinical outcomes, specifying data types (numeric, date, character) and value meanings (e.g., 1=Female, 2=Male). This codebook provides a structured overview of dataset variables for research data management." width="500" height="300"></p>
 <figcaption>Codebook example (https://domstat.med.ucla.edu/)</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+<section id="implement-reproducible-workflows" class="slide level2 center">
+<h2>4. Implement reproducible workflows</h2>
+<p>Implement <span style="color:green;">reproducible workflows</span> using coding (R, Python) to transform <span style="text-decoration: underline;">raw data</span> into data for <span style="text-decoration: underline;">analysis</span>.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -302,7 +287,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -321,7 +306,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable1.webp" width="600" height="300"></p>
+<p><img data-src="images/BadTable1.webp" alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column." width="600" height="300"></p>
 <figcaption>from https://dansteer.wordpress.com/</figcaption>
 </figure>
 </div>
@@ -331,7 +316,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2.png" width="600" height="300"></p>
+<p><img data-src="images/BadTable2.png" alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We can also observe a combination of figures and numeric data in the same sheet." width="600" height="300"></p>
 <figcaption>Courtesy of researcher</figcaption>
 </figure>
 </div>
@@ -351,7 +336,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2_Zhao(2024)_NatureComm.png" width="400" height="400"></p>
+<p><img data-src="images/BadTable2_Zhao(2024)_NatureComm.png" alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We can also observe a combination of figures and numeric data in the same sheet." width="400" height="400"></p>
 <figcaption>Zhao et al.&nbsp;(2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6</figcaption>
 </figure>
 </div>
@@ -361,7 +346,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/BadTable2_Balinda(2024)_NatureComm.png" width="400" height="400"></p>
+<p><img data-src="images/BadTable2_Balinda(2024)_NatureComm.png" alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We also see color codes that must not be defined in a data spreadsheet." width="400" height="400"></p>
 <figcaption>Balinda et al.&nbsp;(2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9</figcaption>
 </figure>
 </div>
@@ -381,13 +366,13 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-3.PNG"></p>
+<p><img data-src="images/Lewis_fig3-3.PNG" alt="Two tables comparing data structures: The left table, labeled 'Not a rectangle,' has an irregular structure with inconsistent alignment of variable names and values, making it difficult to interpret. The right table, labeled 'Rectangle,' follows a structured format with clearly defined columns for student ID, age in months, raw reading score, and standardized reading score. This contrast highlights the importance of tidy, well-structured data in research data management."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-4.PNG"></p>
+<p><img data-src="images/Lewis_fig3-4.PNG" alt="Two tables comparing inconsistent and consistent data formatting. The left table, labeled 'Inconsistent column values,' contains mixed date formats (e.g., '10-12-2023,' 'Oct. 15, 2023,' 'September 15') and inconsistent categorical values for survey completion ('y,' 'Yes,' 'Y,' 'no'). The right table, labeled 'Consistent column values,' standardizes dates to 'YYYY-MM-DD' format and unifies categorical responses to 'y' and 'n.' This highlights best practices in data management for improving data clarity and usability."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -397,13 +382,13 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-5.PNG"></p>
+<p><img data-src="images/Lewis_fig3-5.PNG" alt="Two tables comparing character and numeric variable formatting. The left table, labeled 'Character variable,' contains inconsistent age values: '24' has an extra space, '49 years old' includes unnecessary text, and '36..0' has a formatting error, causing them to be stored as text instead of numbers. The right table, labeled 'Numeric variable,' correctly stores ages as numerical values without extra spaces, text, or formatting issues. This demonstrates the importance of maintaining clean numeric data for proper analysis."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-6.PNG"></p>
+<p><img data-src="images/Lewis_fig3-6.PNG" alt="Two tables comparing improper and proper data structuring. The left table, labeled 'Two things in one variable,' combines incident counts and enrollment numbers into a single column using a 'incident_rate' format (e.g., '55/250'). The right table, labeled 'Two things in two variables,' properly separates these values into distinct columns: 'incident' for the number of incidents and 'enrollment' for the total population. This demonstrates best practices in data management by ensuring each variable represents only one piece of information."></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -417,7 +402,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-7.PNG" width="500" height="200"></p>
+<p><img data-src="images/Lewis_fig3-7.PNG" alt="Two tables comparing implicit and explicit data entry. The left table, labeled 'Not explicit values,' omits repeated school IDs and years, assuming they apply to multiple rows, which can cause confusion in data processing. The right table, labeled 'Explicit values,' explicitly repeats the school ID and year for each row, ensuring clarity and making the dataset more machine-readable. This highlights best practices in research data management for maintaining completeness and reducing ambiguity." width="500" height="200"></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -425,7 +410,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Lewis_fig3-8.PNG" width="600" height="200"></p>
+<p><img data-src="images/Lewis_fig3-8.PNG" alt="Two tables comparing implicit and explicit variable representation. The left table, labeled 'Not explicit variables,' uses cell color to indicate treatment conditions without an explicit variable, which can be misinterpreted or lost in data processing. The right table, labeled 'Explicit variables,' adds a 'treatment' column with numerical values (0 or 1) to explicitly indicate the treatment condition for each student. This demonstrates best practices in research data management by ensuring that all meaningful information is stored as explicit variables rather than relying on formatting or visual cues." width="600" height="200"></p>
 <figcaption>Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -442,7 +427,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/GoodTable.png" width="500" height="300"></p>
+<p><img data-src="images/GoodTable.png" alt="A well-structured dataset in table format, displaying experimental data for different mice. The table includes columns for 'MouseID,' 'DPI' (days post-injury), 'Condition' (MCAO), 'Region' (Contra, Ipsi, Peri), and cell counts for NeuN, Ki67, and BrdU markers. This table demonstrates a clean and organized data structure" width="500" height="300"></p>
 <figcaption>A typical long-format data table organizes the information by rows and columns</figcaption>
 </figure>
 </div>
@@ -476,7 +461,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Lewis_fig3-14.PNG" width="600" height="350"></p>
+<p><img data-src="images/Lewis_fig3-14.PNG" alt="Diagram illustrating the transformation of longitudinal data from separate tables into a wide format. The top two tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The bottom table, labeled 'Wide format data,' consolidates both waves into a single dataset by renaming variables with wave-specific prefixes ('w1_anx1,' 'w1_anx2,' 'w2_anx1,' 'w2_anx2'). This transformation makes it easier to analyze individual-level changes over time." width="600" height="350"></p>
 <figcaption>A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -517,7 +502,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Lewis_fig3-15.PNG" width="700" height="300"></p>
+<p><img data-src="images/Lewis_fig3-15.PNG" alt="Diagram illustrating the transformation of longitudinal data from separate tables into a long format. The top and bottom tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The right table, labeled 'Long format data,' restructures the data by adding a 'wave' column, with each row representing one student's measurements at a specific wave. This transformation optimizes the dataset for longitudinal analysis and efficient storage." width="700" height="300"></p>
 <figcaption>A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3</figcaption>
 </figure>
 </div>
@@ -555,7 +540,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/LongToWide.PNG" width="600" height="350"></p>
+<p><img data-src="images/LongToWide.png" alt="Diagram illustrating the transformation between long and wide data formats using `pivot_wider()` and `pivot_longer()`. The left table represents long format data, where each row contains a 'country', a 'year', and a corresponding 'metric' value. The right table represents wide format data, where 'year' values are spread across multiple columns (e.g., 'yr1960', 'yr1970', 'yr2010'), each containing the corresponding metric for each country. The `pivot_wider()` function converts long format to wide format, while `pivot_longer()` reverses the process, demonstrating flexible data reshaping in R." width="600" height="350"></p>
 <figcaption>Long to wide format (https://tavareshugo.github.io/)</figcaption>
 </figure>
 </div>
@@ -571,7 +556,7 @@ Daniel Manrique-Castano, Ph.D
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div style="text-align: left;font-size: 100%">
 <ul>
-<li>Datasets are <span style="color:red;">unintelligible</span> if they are not accompanied by codebooks or data dictionaries (<span style="color:green;">(.txt, .md, .cvs)</span>) describing the <span style="color:green;">variables</span> of data tables. This can also take the form of a <span style="color:green;">README files</span> <span style="color:green;">(.txt, .md)</span> that describe their <span style="color:green;">context and content</span>.</li>
+<li>Datasets are <span style="color:red;">unintelligible</span> if they are not accompanied by codebooks or data dictionaries <span style="color:green;">(.txt, .md, .cvs)</span> describing the <span style="color:green;">variables</span> of data tables. This can also take the form of a <span style="color:green;">README files</span> <span style="color:green;">(.txt, .md)</span> that describe their <span style="color:green;">context and content</span>.</li>
 </ul>
 </div>
 </div>
@@ -579,7 +564,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DescriptiveMetadata_czi.png" width="600" height="500"></p>
+<p><img data-src="images/DescriptiveMetadata_czi.png" alt="Screenshot of descriptive metadata for a dataset related to PDGFR-B+ cell reactivity in a mouse model of cerebral ischemia. The text provides details on the dataset's origin, file naming conventions, experimental conditions, and image processing methods. It describes how images were derived from high-resolution Zenodo deposits and processed using ImageJ and CellProfiler. The document also outlines folder contents, including Ki67/PDGFR-B object detections and outlines, and references an OSF repository for further details." width="600" height="500"></p>
 <figcaption>Example of a readme file</figcaption>
 </figure>
 </div>
@@ -612,7 +597,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -628,7 +613,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/BrainStaining.png" width="500" height="300"></p>
+<p><img data-src="images/BrainStaining.png" alt="Fluorescence microscopy image of a coronal section of a mouse brain. The section is stained with immunofluorescence markers" width="500" height="300"></p>
 <figcaption>Manrique-Castano et al.&nbsp;(2024). DOI: DOI 10.17605/OSF.IO/3VG8J</figcaption>
 </figure>
 </div>
@@ -673,7 +658,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Transform_czi-tif.png" width="500" height="300"></p>
+<p><img data-src="images/Transform_czi-tif.png" alt="Screenshot of an ImageJ macro script written in JavaScript. The script automates the conversion of `.czi` microscopy image files into `.tif` format. It prompts the user to select a directory, retrieves the list of `.czi` files, and processes each file by opening it with Bio-Formats Importer. It then extracts two image channels, saving them separately as `.tif` files in an 'Images_Tiff' folder. The script ensures all files are processed systematically and closes all windows after completion." width="500" height="300"></p>
 <figcaption>FIJI script to save .czi images as tiff. From Manrique-Castano et al.&nbsp;(2024). DOI: DOI 10.17605/OSF.IO/3VG8J</figcaption>
 </figure>
 </div>
@@ -713,7 +698,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/TechnicalMetadata_czi.png" width="300" height="300"></p>
+<p><img data-src="images/TechnicalMetadata_czi.png" alt="![Screenshot of the metadata viewer displaying technical metadata from a `.czi` microscopy image file. The metadata table includes keys and values such as 'BitsPerPixel' (14), 'DimensionOrder' (XYZCT), and 'PixelType' (uint16). Other metadata details indicate that the image has 4 channels (SizeC), a single time point (SizeT = 1), dimensions of 2752x2208 pixels (SizeX, SizeY), and a single Z-plane (SizeZ = 1). This metadata provides essential information for image processing and analysis in research microscopy." width="300" height="300"></p>
 <figcaption>Example of technical metadata in FIJI: <em>image -&gt; show info</em></figcaption>
 </figure>
 </div>
@@ -725,7 +710,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/DescriptiveMetadata_czi.png" width="400" height="330"></p>
+<p><img data-src="images/DescriptiveMetadata_czi.png" alt="Screenshot of descriptive metadata for a dataset related to PDGFR-B+ cell reactivity in a mouse model of cerebral ischemia. The text provides details on the dataset's origin, file naming conventions, experimental conditions, and image processing methods. It describes how images were derived from high-resolution Zenodo deposits and processed using ImageJ and CellProfiler. The document also outlines folder contents, including Ki67/PDGFR-B object detections and outlines, and references an OSF repository for further details." width="400" height="330"></p>
 <figcaption>Example of <a href="https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt">descriptive metadata</a></figcaption>
 </figure>
 </div>
@@ -758,7 +743,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -777,7 +762,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: left;font-size: 60%">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="images/Economist_Retractions.png" width="450" height="450"></p>
+<p><img data-src="images/Economist_Retractions.png" alt="A chart from The Economist titled 'Pants on fire,' illustrating the cumulative number of retracted biomedical science papers from 1996 to 2023. The graph shows an exponential increase in retractions, reaching over 15,000 by 2023. The data is sourced from Retraction Watch, covering 4,244 assessed journals. The chart highlights growing concerns about scientific integrity and the rise in retracted publications over time." width="450" height="450"></p>
 <figcaption>Increase in the number of retracted articles in the last three decades</figcaption>
 </figure>
 </div>
@@ -803,7 +788,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Matryoska.jpeg"></p>
+<p><img data-src="images/Matryoska.jpeg" alt="A display of traditional Russian Matryoshka dolls, also known as nesting dolls, painted in vibrant colors."></p>
 <figcaption>From pexels.com</figcaption>
 </figure>
 </div>
@@ -813,7 +798,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 70%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/files.png" style="width:75.0%"></p>
+<p><img data-src="images/files.png" style="width:75.0%" alt="A structured directory tree representing an organized research project folder. The top-level folders include 'Code,' containing R scripts for data cleaning and analysis ('clean_raw_data.r,' 'analysis_1.r,' 'analysis_2.r'); 'Data,' which is divided into 'Raw_data' (containing raw files 'file_a.raw' and 'file_b.raw') and 'Processed_data' (containing cleaned CSV files 'file_a.csv' and 'file_b.csv'); 'Outputs,' which includes subfolders for 'Figures' and 'Models'; and a 'README.txt' file. This structure follows best practices for research data organization."></p>
 <figcaption>File structure</figcaption>
 </figure>
 </div>
@@ -859,7 +844,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/tier.png" style="width:40.0%"></p>
+<p><img data-src="images/tier.png" style="width:40.0%" alt="A hierarchical directory structure following the TIER Protocol 4.0 for research data organization. The top-level 'Project/' folder contains key documents such as 'The Read Me File' and 'The Report.' The 'Data/' folder is divided into 'InputData/' (with 'Input Data Files' and 'Metadata' subfolders, including 'Data Sources Guide' and 'Codebooks'), 'AnalysisData/' (with 'Analysis Data Files' and 'The Data Appendix'), and 'IntermediateData/'. The 'Scripts/' folder includes subfolders for 'ProcessingScripts/', 'DataAppendixScripts/', 'AnalysisScripts/', and 'The Master Script.' The 'Output/' folder contains 'DataAppendixOutput' and 'Results.' This structure ensures transparency and reproducibility in research data management."></p>
 <figcaption>Folder tree</figcaption>
 </figure>
 </div>
@@ -887,7 +872,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/data_raw.png" style="width:90.0%"></p>
+<p><img data-src="images/data_raw.png" style="width:90.0%" alt="A screenshot of a structured directory containing organized raw data."></p>
 <figcaption>Folder tree</figcaption>
 </figure>
 </div>
@@ -923,7 +908,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/data_processed.png" style="width:90.0%"></p>
+<p><img data-src="images/data_processed.png" style="width:80.0%" alt="A screenshot of a structured directory containing organized processed data."></p>
 <figcaption>Folder tree</figcaption>
 </figure>
 </div>
@@ -942,7 +927,7 @@ Daniel Manrique-Castano, Ph.D
 <p>While most scientists may be more comfortable with GUIs, the current research landscape requires the use of <span style="color:green;">scripts and code</span> to ensure reproducible research results.</p>
 </div>
 
-<img data-src="images/Theway.png" class="quarto-figure quarto-figure-center r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<img data-src="images/Theway.png" class="quarto-figure quarto-figure-center r-stretch" alt="A humorous Star Wars-themed meme comparing different programming languages. The image is divided into three sections, each showing a Star Wars character wielding a lightsaber. On the left, Luke Skywalker, with an 'R' programming language logo, holds a blue lightsaber. In the center, Kylo Ren wields a red crossguard lightsaber with the GraphPad logo. On the right, Mace Windu, associated with the Python logo, holds a purple lightsaber. This meme humorously depicts the perceived roles open sofeare has in the research landscape."><div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -968,7 +953,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/R-studio_Screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/R-studio_Screen.jpg" alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." width="500" height="300"></p>
 <figcaption>R-studio/quarto screen</figcaption>
 </figure>
 </div>
@@ -979,7 +964,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/GitHub_screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/GitHub_screen.jpg" alt="Screenshot of a GitHub repository named 'Stroke_PDGRF-B_Reactivity,' forked from 'elalilab/Stroke_PDGRF-B_Reactivity.' The repository is public and contains directories such as 'Data_Processed' and multiple Quarto markdown files (`.qmd`) related to data analysis" width="500" height="300"></p>
 <figcaption>GitHub screen</figcaption>
 </figure>
 </div>
@@ -1000,7 +985,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/R-studio_Screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/R-studio_Screen.jpg" alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." width="500" height="300"></p>
 <figcaption>R-studio/quarto screen</figcaption>
 </figure>
 </div>
@@ -1032,7 +1017,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/GitHub_screen.jpg" width="500" height="300"></p>
+<p><img data-src="images/GitHub_screen.jpg" alt="Screenshot of a GitHub repository named 'Stroke_PDGRF-B_Reactivity,' forked from 'elalilab/Stroke_PDGRF-B_Reactivity.' The repository is public and contains directories such as 'Data_Processed' and multiple Quarto markdown files (`.qmd`) related to data analysis" width="500" height="300"></p>
 <figcaption>GitHub screen</figcaption>
 </figure>
 </div>
@@ -1063,7 +1048,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Rladies_Logo.png" width="300" height="300"></p>
+<p><img data-src="images/Rladies_logo.png" alt="Logo of R-Ladies, a global organization that promotes gender diversity in the R programming community. The logo features a stylized gray 'R' symbol in the background, similar to the official R programming language logo, with a bold purple 'R' in the foreground. Below, the word 'Ladies' is written in gray. The logo represents an inclusive and supportive community for women and gender minorities in data science and programming with R." width="300" height="300"></p>
 <figcaption><a href="https://github.com/rladies">R Ladies</a></figcaption>
 </figure>
 </div>
@@ -1073,7 +1058,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pyladies_logo.png" width="300" height="300"></p>
+<p><img data-src="images/pyladies_logo.png" alt="Logo of PyLadies, an international organization that promotes gender diversity in the Python programming community. The logo features a stylized illustration of a woman with red hair, black-rimmed glasses, and expressive eyes with long lashes. Below the face, the word 'pyladies' is written in a cursive, cream-colored font on a red banner. The circular logo represents an inclusive and supportive community for women and gender minorities in Python programming and data science." width="300" height="300"></p>
 <figcaption><a href="https://github.com/pyladies">Py Ladies</a></figcaption>
 </figure>
 </div>
@@ -1130,7 +1115,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/scripts_processing.png" style="width:90.0%"></p>
+<p><img data-src="images/scripts_processing.png" style="width:90.0%" alt="A screenshot of a structured directory containing organized analysis data."></p>
 <figcaption>Folder tree</figcaption>
 </figure>
 </div>
@@ -1176,7 +1161,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/output.png" style="width:100.0%"></p>
+<p><img data-src="images/output.png" style="width:100.0%" alt="A screenshot of a structured directory containing scientific figures/plots"></p>
 <figcaption>Folder tree</figcaption>
 </figure>
 </div>
@@ -1209,7 +1194,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -1226,7 +1211,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center; font-size: 50%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/readme.webp" width="700" height="300"></p>
+<p><img data-src="images/readme.webp" alt="Screenshot of a GitHub README file for the 'Bootstrap Ruby Gem,' a library used in Ruby on Rails applications. The README file includes a badge indicating that the gem build is passing and version 4.1.1 is available. The document provides installation instructions, including how to add the gem to the Gemfile and ensure compatibility with 'sprockets-rails.' The guide references different environments, including Ruby on Rails and other Ruby frameworks. The page contains formatted code snippets for easy integration into a Rails project." width="700" height="300"></p>
 <figcaption>From https://github.com/twbs/bootstrap-rubygem</figcaption>
 </figure>
 </div>
@@ -1270,7 +1255,7 @@ Daniel Manrique-Castano, Ph.D
 </section></section>
 <section>
 <section id="checklist-for-reproducible-research" class="title-slide slide level1 agenda-slide center">
-<h1>checklist for reproducible research</h1>
+<h1>Checklist for reproducible research</h1>
 <div class="agenda-heading">
 <p>Agenda</p>
 </div>
@@ -1292,7 +1277,7 @@ Daniel Manrique-Castano, Ph.D
 <p>Write a README file</p>
 </div></li>
 <li><div class="agenda-active">
-<p>checklist for reproducible research</p>
+<p>Checklist for reproducible research</p>
 </div></li>
 </ol>
 </div>
@@ -1345,7 +1330,7 @@ Daniel Manrique-Castano, Ph.D
 <div style="text-align: center;font-size: 100%">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/Presentation_QR-code.png" width="200" height="200"></p>
+<p><img data-src="images/Presentation_QR-code.png" alt="A QR code image that redirects to the presentation located in a GitHub repository." width="200" height="200"></p>
 <figcaption>This presentation is available <a href="https://github.com/Alliance-RDM-GDR/RDM_OrganizeData">here</a> (English or French)</figcaption>
 </figure>
 </div>

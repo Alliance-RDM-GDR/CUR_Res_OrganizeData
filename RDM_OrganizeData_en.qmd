@@ -44,8 +44,8 @@ editor: source
 
 ## Make datasets understandable
 
-::::: {layout-ncol="2"}
-:::: {#first-column}
+:::::{layout-ncol="2" layout-valign="center"}
+::::{#first-column}
 :::{style="text-align: left;font-size: 80%"}
 Research data comes in many tastes and shapes ([tables]{style="color:orange;"}, [images]{style="color:magenta;"}, [videos]{style="color:red;"}, [text]{style="color:gray;"}).
 
@@ -59,48 +59,45 @@ Try to put yourself in the shoes of an [outside observer]{style="color:green;"} 
 
 :::: {#second-column}
 ::: {style="text-align: center; font-size: 70%"}
-![Others generally do not understand research data](images/DificultData.webp){fig-align="center" width="500" height="500"}
+![Others generally do not understand research data](images/DificultData.webp){fig-alt="A black-and-white cartoon illustration of a frustrated person holding their head, surrounded by question marks. The person is sitting at a table covered with large, disorganized spreadsheets filled with numbers and text, symbolizing the challenge of managing and understanding research data." fig-align="center" width="450" height="450"}
 :::
 ::::
 :::::
 
-## Four principles for organizing a dataset 
+## 1. Use naming conventions{.center} 
 
-:::{style="text-align: left;font-size: 80%"}
-1.  Use consistent [naming conventions](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) that fairly describe file's content and allow interrelation between files:
+Use consistent [naming conventions](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) that fairly describe file's content and allow interrelation between files:
 
 -   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Day_Condition_Marker.tif]{style="color:green;"}
 -   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Counts.csv]{style="color:green;"}
 
-2.  Use [proper, open/accessible]{style="color:green;"} [file formats](https://osf.io/ena5p) to improve accessibility:
+
+## 2. Prioritize open file formats{.center}
+
+Use [proper, open/accessible]{style="color:green;"} [file formats](https://osf.io/ena5p) to improve accessibility:
 
 -   {{< bi card-image>}} [.tif]{style="color:green;"} for images (preserve the metadata).
 -   {{< bi file-earmark-spreadsheet>}} [.csv]{style="color:green;"} for tables (non-proprietary).
 -   {{< bi file-bar-graph-fill>}} [.png or .svg]{style="color:green;"} for graphs (preserves quality).
 -   {{< bi file-earmark-pdf-fill>}} [.txt or .pdf]{style="color:green;"} for documentation (non-proprietary).
+
+
+## 3. Provide comprehensive metadata{.center}
+
+Use [comprehensive metadata]{style="color:green;"} (README files and data dictionaries/codebook) to [contextualize]{style="text-decoration: underline;"} and [describe]{style="text-decoration: underline;"} research files.
+
+:::{style="text-align: center; font-size: 70%"}
+![Codebook example (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-alt="A table displaying a codebook for a dataset, with columns labeled 'Variable Name,' 'Description,' 'Type,' and 'Values or Characteristics.' The table defines variables such as patient ID, gender, procedure date, treatment group, and clinical outcomes, specifying data types (numeric, date, character) and value meanings (e.g., 1=Female, 2=Male). This codebook provides a structured overview of dataset variables for research data management."    fig-align="center" width="500" height="300"}
 :::
 
-## Four best practices for organizing a dataset
+## 4. Implement reproducible workflows{.center}
 
-::::: {layout-ncol="2"}
-:::: {#first-column}
-:::{style="text-align: left;font-size: 80%"}
-3.  Use [comprehensive metadata]{style="color:green;"} (README files and data dictionaries/codebook) to [contextualize]{style="text-decoration: underline;"} and [describe]{style="text-decoration: underline;"} research files.
-
-4.  Implement [reproducible workflows]{style="color:green;"} using coding (R, Python) to transform [raw data]{style="text-decoration: underline;"} into data for [analysis]{style="text-decoration: underline;"}.
-:::
-::::
-
-:::: {#second-column}
-::: {style="text-align: center; font-size: 70%"}
-![Codebook example (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-align="center" width="500" height="300"}
-:::
-::::
-:::::
+Implement [reproducible workflows]{style="color:green;"} using coding (R, Python) to transform [raw data]{style="text-decoration: underline;"} into data for [analysis]{style="text-decoration: underline;"}.
 
 ::: callout-tip
 These practices ensure [organized, clean, and validated]{style="color:green;"} datasets.
 :::
+
 
 # Handling data tables
 
@@ -113,13 +110,13 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![from https://dansteer.wordpress.com/](images/BadTable1.webp){fig-align="center" width="600" height="300"}
+![from https://dansteer.wordpress.com/](images/BadTable1.webp){fig-alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column." fig-align="center" width="600" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Courtesy of researcher](images/BadTable2.png){fig-align="center" width="600" height="300"}
+![Courtesy of researcher](images/BadTable2.png){fig-alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We can also observe a combination of figures and numeric data in the same sheet."  fig-align="center" width="600" height="300"}
 :::
 ::::
 :::::
@@ -129,33 +126,33 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We can also observe a combination of figures and numeric data in the same sheet." fig-align="center" width="400" height="400"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-alt="Example of bad data formatting, showcasing a spreadsheet with combined cells and different variables in the same column. We also see color codes that must not be defined in a data spreadsheet." fig-align="center" width="400" height="400"}
 :::
 ::::
 :::::
 
-## Examples from Crystal Lewis (2024) {.center}
+## Examples from Crystal Lewis (2024){.center}
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG){fig-alt="Two tables comparing data structures: The left table, labeled 'Not a rectangle,' has an irregular structure with inconsistent alignment of variable names and values, making it difficult to interpret. The right table, labeled 'Rectangle,' follows a structured format with clearly defined columns for student ID, age in months, raw reading score, and standardized reading score. This contrast highlights the importance of tidy, well-structured data in research data management."}
 
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG){fig-alt="Two tables comparing inconsistent and consistent data formatting. The left table, labeled 'Inconsistent column values,' contains mixed date formats (e.g., '10-12-2023,' 'Oct. 15, 2023,' 'September 15') and inconsistent categorical values for survey completion ('y,' 'Yes,' 'Y,' 'no'). The right table, labeled 'Consistent column values,' standardizes dates to 'YYYY-MM-DD' format and unifies categorical responses to 'y' and 'n.' This highlights best practices in data management for improving data clarity and usability."}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG){fig-alt="Two tables comparing character and numeric variable formatting. The left table, labeled 'Character variable,' contains inconsistent age values: '24' has an extra space, '49 years old' includes unnecessary text, and '36..0' has a formatting error, causing them to be stored as text instead of numbers. The right table, labeled 'Numeric variable,' correctly stores ages as numerical values without extra spaces, text, or formatting issues. This demonstrates the importance of maintaining clean numeric data for proper analysis."}
 
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG)
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG){fig-alt="Two tables comparing improper and proper data structuring. The left table, labeled 'Two things in one variable,' combines incident counts and enrollment numbers into a single column using a 'incident_rate' format (e.g., '55/250'). The right table, labeled 'Two things in two variables,' properly separates these values into distinct columns: 'incident' for the number of incidents and 'enrollment' for the total population. This demonstrates best practices in data management by ensuring each variable represents only one piece of information."}
 :::
 ::::
 :::::
@@ -163,11 +160,11 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ## Examples from Crystal Lewis (2024)
 
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-align="center" width="500" height="200"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-alt="Two tables comparing implicit and explicit data entry. The left table, labeled 'Not explicit values,' omits repeated school IDs and years, assuming they apply to multiple rows, which can cause confusion in data processing. The right table, labeled 'Explicit values,' explicitly repeats the school ID and year for each row, ensuring clarity and making the dataset more machine-readable. This highlights best practices in research data management for maintaining completeness and reducing ambiguity." fig-align="center" width="500" height="200"}
 :::
 
 ::: {style="text-align: center;font-size: 50%"}
-![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-align="center" width="600" height="200"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-alt="Two tables comparing implicit and explicit variable representation. The left table, labeled 'Not explicit variables,' uses cell color to indicate treatment conditions without an explicit variable, which can be misinterpreted or lost in data processing. The right table, labeled 'Explicit variables,' adds a 'treatment' column with numerical values (0 or 1) to explicitly indicate the treatment condition for each student. This demonstrates best practices in research data management by ensuring that all meaningful information is stored as explicit variables rather than relying on formatting or visual cues." fig-align="center" width="600" height="200"}
 :::
 
 
@@ -176,7 +173,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![A typical long-format data table organizes the information by rows and columns](images/GoodTable.png){fig-align="left" width="500" height="300"}
+![A typical long-format data table organizes the information by rows and columns](images/GoodTable.png){fig-alt="A well-structured dataset in table format, displaying experimental data for different mice. The table includes columns for 'MouseID,' 'DPI' (days post-injury), 'Condition' (MCAO), 'Region' (Contra, Ipsi, Peri), and cell counts for NeuN, Ki67, and BrdU markers. This table demonstrates a clean and organized data structure" fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -198,7 +195,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-align="left" width="600" height="350"}
+![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-alt="Diagram illustrating the transformation of longitudinal data from separate tables into a wide format. The top two tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The bottom table, labeled 'Wide format data,' consolidates both waves into a single dataset by renaming variables with wave-specific prefixes ('w1_anx1,' 'w1_anx2,' 'w2_anx1,' 'w2_anx2'). This transformation makes it easier to analyze individual-level changes over time." fig-align="left" width="600" height="350"}
 :::
 ::::
 
@@ -220,7 +217,7 @@ Here, columns are [responses or predictors]{style="color:green;"} in a regressio
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-align="left" width="700" height="300"}
+![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-alt="Diagram illustrating the transformation of longitudinal data from separate tables into a long format. The top and bottom tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The right table, labeled 'Long format data,' restructures the data by adding a 'wave' column, with each row representing one student's measurements at a specific wave. This transformation optimizes the dataset for longitudinal analysis and efficient storage." fig-align="left" width="700" height="300"}
 :::
 ::::
 
@@ -246,7 +243,7 @@ Long-format is usually the first choice for data analysis.
 You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long to wide table format, or visceversa [tutorial](https://shanghai.hosting.nyu.edu/data/r/reshaping.html).   
 
 ::: {style="text-align: center;font-size: 60%"} 
-![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.PNG){fig-align="center" width="600" height="350"}
+![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagram illustrating the transformation between long and wide data formats using `pivot_wider()` and `pivot_longer()`. The left table represents long format data, where each row contains a 'country', a 'year', and a corresponding 'metric' value. The right table represents wide format data, where 'year' values are spread across multiple columns (e.g., 'yr1960', 'yr1970', 'yr2010'), each containing the corresponding metric for each country. The `pivot_wider()` function converts long format to wide format, while `pivot_longer()` reverses the process, demonstrating flexible data reshaping in R." fig-align="center" width="600" height="350"}
 :::
 
 
@@ -255,13 +252,13 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 100%"} 
-- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries ([(.txt, .md, .cvs)]{style="color:green;"}) describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README files]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describe their [context and content]{style="color:green;"}. 
+- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries [(.txt, .md, .cvs)]{style="color:green;"} describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README files]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describe their [context and content]{style="color:green;"}. 
 :::
 ::::
 
 ::::{#second-column}
 ::: {style="text-align: center;font-size: 70%"} 
-![Example of a readme file](images/DescriptiveMetadata_czi.png){fig-align="center" width="600" height="500"}
+![Example of a readme file](images/DescriptiveMetadata_czi.png){fig-alt="Screenshot of descriptive metadata for a dataset related to PDGFR-B+ cell reactivity in a mouse model of cerebral ischemia. The text provides details on the dataset's origin, file naming conventions, experimental conditions, and image processing methods. It describes how images were derived from high-resolution Zenodo deposits and processed using ImageJ and CellProfiler. The document also outlines folder contents, including Ki67/PDGFR-B object detections and outlines, and references an OSF repository for further details." fig-align="center" width="600" height="500"}
 :::
 ::::
 :::::
@@ -273,7 +270,7 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-align="left" width="500" height="300"}
+![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-alt="Fluorescence microscopy image of a coronal section of a mouse brain. The section is stained with immunofluorescence markers" fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -296,7 +293,7 @@ Visit this [resource](https://github.com/Alliance-RDM-GDR/RDM_BioimageFAIR) for 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![FIJI script to save .czi images as tiff. From Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
+![FIJI script to save .czi images as tiff. From Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-alt="Screenshot of an ImageJ macro script written in JavaScript. The script automates the conversion of `.czi` microscopy image files into `.tif` format. It prompts the user to select a directory, retrieves the list of `.czi` files, and processes each file by opening it with Bio-Formats Importer. It then extracts two image channels, saving them separately as `.tif` files in an 'Images_Tiff' folder. The script ensures all files are processed systematically and closes all windows after completion." fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -319,7 +316,7 @@ Saving .czi images as .tif using FIJI will result in [metadata loss]{style="colo
 Export technical metadata from proprietary images (i.e .czi) as [.txt or .csv]{style="color:green;"} files (This may applied for all images in a batch).  
 
 ::: {style="text-align: center;font-size: 70%"} 
-![Example of technical metadata in FIJI: *image -> show info*](images/TechnicalMetadata_czi.png){fig-align="center" width="300" height="300"}
+![Example of technical metadata in FIJI: *image -> show info*](images/TechnicalMetadata_czi.png){fig-alt="![Screenshot of the metadata viewer displaying technical metadata from a `.czi` microscopy image file. The metadata table includes keys and values such as 'BitsPerPixel' (14), 'DimensionOrder' (XYZCT), and 'PixelType' (uint16). Other metadata details indicate that the image has 4 channels (SizeC), a single time point (SizeT = 1), dimensions of 2752x2208 pixels (SizeX, SizeY), and a single Z-plane (SizeZ = 1). This metadata provides essential information for image processing and analysis in research microscopy." fig-align="center" width="300" height="300"}
 :::
 ::::
 
@@ -329,7 +326,7 @@ Export technical metadata from proprietary images (i.e .czi) as [.txt or .csv]{s
 Generate descriptive readme files to explain the [provenance and naming conventions]{style="color:green;"} of the images.
 
 ::: {style="text-align: center;font-size: 70%"} 
-![Example of [descriptive metadata](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-align="center" width="400" height="330"}
+![Example of [descriptive metadata](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-alt="Screenshot of descriptive metadata for a dataset related to PDGFR-B+ cell reactivity in a mouse model of cerebral ischemia. The text provides details on the dataset's origin, file naming conventions, experimental conditions, and image processing methods. It describes how images were derived from high-resolution Zenodo deposits and processed using ImageJ and CellProfiler. The document also outlines folder contents, including Ki67/PDGFR-B object detections and outlines, and references an OSF repository for further details." fig-align="center" width="400" height="330"}
 :::
 ::::
 :::::
@@ -345,7 +342,7 @@ We live in a pandemic of [fraudulent and irreproducible science]{style="color:re
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 60%"} 
-![Increase in the number of retracted articles in the last three decades](images/Economist_Retractions.png){fig-align="left" width="450" height="450"}
+![Increase in the number of retracted articles in the last three decades](images/Economist_Retractions.png){fig-alt="A chart from The Economist titled 'Pants on fire,' illustrating the cumulative number of retracted biomedical science papers from 1996 to 2023. The graph shows an exponential increase in retractions, reaching over 15,000 by 2023. The data is sourced from Retraction Watch, covering 4,244 assessed journals. The chart highlights growing concerns about scientific integrity and the rise in retracted publications over time." fig-align="left" width="450" height="450"}
 :::
 ::::
 
@@ -364,13 +361,13 @@ A [structured dataset]{style="color:green;"} is the key to understanding and reu
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 70%"}
-![From pexels.com](images/Matryoska.jpeg)
+![From pexels.com](images/Matryoska.jpeg){fig-alt="A display of traditional Russian Matryoshka dolls, also known as nesting dolls, painted in vibrant colors."}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 70%"}
-![File structure](images/files.png){width="75%"}
+![File structure](images/files.png){fig-alt="A structured directory tree representing an organized research project folder. The top-level folders include 'Code,' containing R scripts for data cleaning and analysis ('clean_raw_data.r,' 'analysis_1.r,' 'analysis_2.r'); 'Data,' which is divided into 'Raw_data' (containing raw files 'file_a.raw' and 'file_b.raw') and 'Processed_data' (containing cleaned CSV files 'file_a.csv' and 'file_b.csv'); 'Outputs,' which includes subfolders for 'Figures' and 'Models'; and a 'README.txt' file. This structure follows best practices for research data organization." width="75%"}
 :::
 ::::
 :::::
@@ -402,7 +399,7 @@ Overall, ensure that the dataset structure is [logical and consistent]{style="co
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/tier.png){width="40%"}
+![Folder tree](images/tier.png){fig-alt="A hierarchical directory structure following the TIER Protocol 4.0 for research data organization. The top-level 'Project/' folder contains key documents such as 'The Read Me File' and 'The Report.' The 'Data/' folder is divided into 'InputData/' (with 'Input Data Files' and 'Metadata' subfolders, including 'Data Sources Guide' and 'Codebooks'), 'AnalysisData/' (with 'Analysis Data Files' and 'The Data Appendix'), and 'IntermediateData/'. The 'Scripts/' folder includes subfolders for 'ProcessingScripts/', 'DataAppendixScripts/', 'AnalysisScripts/', and 'The Master Script.' The 'Output/' folder contains 'DataAppendixOutput' and 'Results.' This structure ensures transparency and reproducibility in research data management." width="40%"}
 :::
 ::::
 :::::
@@ -421,7 +418,7 @@ A [Data_Raw/]{style="color:orange;"} folder can contain:
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/data_raw.png){width="90%"}
+![Folder tree](images/data_raw.png){fig-alt="A screenshot of a structured directory containing organized raw data." width="90%"}
 :::
 ::::
 :::::
@@ -451,12 +448,12 @@ A [Data_Analysis/]{style="color:orange;"} folder contains [processed files]{styl
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/data_processed.png){width="90%"}
+![Folder tree](images/data_processed.png){fig-alt="A screenshot of a structured directory containing organized processed data." width="80%"}
 :::
 ::::
 :::::
 
-## {{< bi folder-fill >}} Intermediate data (Optional) {.center}
+## {{< bi folder-fill >}} Intermediate data (Optional){.center}
 
 A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} can contain intermediate processed data, or pre-processed files as part of an analysis pipeline. For example, image 'masks' and machine learning classifiers that are used to further process images.
 
@@ -467,7 +464,7 @@ A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} can contain
 While most scientists may be more comfortable with GUIs, the current research landscape requires the use of [scripts and code]{style="color:green;"} to ensure reproducible research results.
 :::
 
-![](images/Theway.png){fig-align="center"}
+![](images/Theway.png){fig-alt="A humorous Star Wars-themed meme comparing different programming languages. The image is divided into three sections, each showing a Star Wars character wielding a lightsaber. On the left, Luke Skywalker, with an 'R' programming language logo, holds a blue lightsaber. In the center, Kylo Ren wields a red crossguard lightsaber with the GraphPad logo. On the right, Mace Windu, associated with the Python logo, holds a purple lightsaber. This meme humorously depicts the perceived roles open sofeare has in the research landscape." fig-align="center"}
 
 ::: callout-tip
 {{< bi code-square >}} Coding should be considered an [essential skill]{style="color:green;"} like other research methods.
@@ -480,14 +477,14 @@ While most scientists may be more comfortable with GUIs, the current research la
 
 ### {{< bi code-square>}} R-studio/Quarto (R + Python)
 ::: {style="text-align: center;font-size: 100%"} 
-![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." fig-align="center" width="500" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ### {{< bi github>}} GitHub (Version control)
 ::: {style="text-align: center;font-size: 100%"} 
-![GitHub screen](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+![GitHub screen](images/GitHub_screen.jpg){fig-alt="Screenshot of a GitHub repository named 'Stroke_PDGRF-B_Reactivity,' forked from 'elalilab/Stroke_PDGRF-B_Reactivity.' The repository is public and contains directories such as 'Data_Processed' and multiple Quarto markdown files (`.qmd`) related to data analysis" fig-align="center" width="500" height="300"}
 :::
 ::::
 :::::
@@ -499,7 +496,7 @@ While most scientists may be more comfortable with GUIs, the current research la
 
 ### {{< bi code-square>}} R-studio/Quarto (R + Python)
 ::: {style="text-align: center;font-size: 100%"} 
-![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-alt="Screenshot of an R-Studio session displaying a Quarto data analysis notebook." fig-align="center" width="500" height="300"}
 :::
 ::::
 
@@ -525,7 +522,7 @@ While most scientists may be more comfortable with GUIs, the current research la
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![GitHub screen](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+![GitHub screen](images/GitHub_screen.jpg){fig-alt="Screenshot of a GitHub repository named 'Stroke_PDGRF-B_Reactivity,' forked from 'elalilab/Stroke_PDGRF-B_Reactivity.' The repository is public and contains directories such as 'Data_Processed' and multiple Quarto markdown files (`.qmd`) related to data analysis" fig-align="center" width="500" height="300"}
 :::
 ::::
 
@@ -550,13 +547,13 @@ With [GitHub]{style="color:magenta;"} {{< bi github>}}  or [GitLab]{style="color
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![[R Ladies](https://github.com/rladies)](images/Rladies_Logo.png){fig-align="center" width="300" height="300"}
+![[R Ladies](https://github.com/rladies)](images/Rladies_logo.png){fig-alt="Logo of R-Ladies, a global organization that promotes gender diversity in the R programming community. The logo features a stylized gray 'R' symbol in the background, similar to the official R programming language logo, with a bold purple 'R' in the foreground. Below, the word 'Ladies' is written in gray. The logo represents an inclusive and supportive community for women and gender minorities in data science and programming with R." fig-align="center" width="300" height="300"}
 :::
 ::::
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 100%"} 
-![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-align="center" width="300" height="300"}
+![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-alt="Logo of PyLadies, an international organization that promotes gender diversity in the Python programming community. The logo features a stylized illustration of a woman with red hair, black-rimmed glasses, and expressive eyes with long lashes. Below the face, the word 'pyladies' is written in a cursive, cream-colored font on a red banner. The circular logo represents an inclusive and supportive community for women and gender minorities in Python programming and data science." fig-align="center" width="300" height="300"}
 :::
 ::::
 :::::
@@ -594,7 +591,7 @@ The [Scripts_Analysis]{style="color:orange;"} folder hosts code to generate resu
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/scripts_processing.png){width="90%"}
+![Folder tree](images/scripts_processing.png){fig-alt="A screenshot of a structured directory containing organized analysis data." width="90%"}
 :::
 ::::
 :::::
@@ -623,7 +620,7 @@ The [Results/]{style="color:orange;"} folder contains files generated by the ana
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/output.png){width="100%"}
+![Folder tree](images/output.png){fig-alt="A screenshot of a structured directory containing scientific figures/plots" width="100%"}
 :::
 ::::
 :::::
@@ -637,7 +634,7 @@ The [Results/]{style="color:orange;"} folder contains files generated by the ana
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center; font-size: 50%"}
-![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="700" height="300"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-alt="Screenshot of a GitHub README file for the 'Bootstrap Ruby Gem,' a library used in Ruby on Rails applications. The README file includes a badge indicating that the gem build is passing and version 4.1.1 is available. The document provides installation instructions, including how to add the gem to the Gemfile and ensure compatibility with 'sprockets-rails.' The guide references different environments, including Ruby on Rails and other Ruby frameworks. The page contains formatted code snippets for easy integration into a Rails project." fig-align="center" width="700" height="300"}
 :::
 ::::
 
@@ -670,7 +667,7 @@ Generally, a dataset readme file showcases:
 A dataset is a [standalone object]{style="text-decoration: underline;"}. Methodological information [MUST NOT]{style="color:red;"} be relegated to associated research articles.
 :::
 
-# checklist for reproducible research
+# Checklist for reproducible research
 
 ## {{< bi card-checklist >}} Commitment to reproducibility{.center}
 
@@ -710,7 +707,7 @@ Visit this [resource](https://github.com/Alliance-RDM-GDR/RDM_DepositingData) fo
 
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 100%"}
-![This presentation is available [here](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData) (English or French)](images/Presentation_QR-code.png){fig-align="center" width="200" height="200"}
+![This presentation is available [here](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData) (English or French)](images/Presentation_QR-code.png){fig-alt="A QR code image that redirects to the presentation located in a GitHub repository." fig-align="center" width="200" height="200"}
 :::
 ::::
 :::::
