@@ -10,6 +10,7 @@ author:
 
 format: 
   html:
+    link-external-newwindow: true
     embed-resources: true
     mermaid:
       theme: forest
@@ -168,12 +169,12 @@ Despite being the most common file type (.xls) for recording/storing data, table
 :::
 
 
-## {{< bi file-earmark-spreadsheet>}} Building accesible data tables{.center} 
+## {{< bi file-earmark-spreadsheet>}} Building accessible data tables{.center} 
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![A typical long-format data table organizes the information by rows and columns](images/GoodTable.png){fig-alt="A well-structured dataset in table format, displaying experimental data for different mice. The table includes columns for 'MouseID,' 'DPI' (days post-injury), 'Condition' (MCAO), 'Region' (Contra, Ipsi, Peri), and cell counts for NeuN, Ki67, and BrdU markers. This table demonstrates a clean and organized data structure" fig-align="left" width="500" height="300"}
+![A typical data table organizes the information by rows and columns](images/GoodTable.png){fig-alt="A well-structured dataset in table format, displaying experimental data for different mice. The table includes columns for 'MouseID,' 'DPI' (days post-injury), 'Condition' (MCAO), 'Region' (Contra, Ipsi, Peri), and cell counts for NeuN, Ki67, and BrdU markers. This table demonstrates a clean and organized data structure" fig-align="left" width="500" height="300"}
 :::
 ::::
 
@@ -217,7 +218,7 @@ Here, columns are [responses or predictors]{style="color:green;"} in a regressio
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-alt="Diagram illustrating the transformation of longitudinal data from separate tables into a long format. The top and bottom tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The right table, labeled 'Long format data,' restructures the data by adding a 'wave' column, with each row representing one student's measurements at a specific wave. This transformation optimizes the dataset for longitudinal analysis and efficient storage." fig-align="left" width="700" height="300"}
+![A typical long-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-alt="Diagram illustrating the transformation of longitudinal data from separate tables into a long format. The top and bottom tables represent 'Wave 1 data' and 'Wave 2 data,' each containing anxiety measures ('anx1' and 'anx2') for students identified by 'stu_id.' The right table, labeled 'Long format data,' restructures the data by adding a 'wave' column, with each row representing one student's measurements at a specific wave. This transformation optimizes the dataset for longitudinal analysis and efficient storage." fig-align="left" width="700" height="300"}
 :::
 ::::
 
@@ -246,13 +247,14 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 ![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagram illustrating the transformation between long and wide data formats using `pivot_wider()` and `pivot_longer()`. The left table represents long format data, where each row contains a 'country', a 'year', and a corresponding 'metric' value. The right table represents wide format data, where 'year' values are spread across multiple columns (e.g., 'yr1960', 'yr1970', 'yr2010'), each containing the corresponding metric for each country. The `pivot_wider()` function converts long format to wide format, while `pivot_longer()` reverses the process, demonstrating flexible data reshaping in R." fig-align="center" width="600" height="350"}
 :::
 
+[R tutorial](https://shanghai.hosting.nyu.edu/data/r/reshaping.html)
 
 ## {{< bi file-earmark-font-fill>}} Provide metadata (README files){.center}    
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 100%"} 
-- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries [(.txt, .md, .cvs)]{style="color:green;"} describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README files]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describe their [context and content]{style="color:green;"}. 
+- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries [(.txt, .md, .csv)]{style="color:green;"} describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README file]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describes their [context and content]{style="color:green;"}. 
 :::
 ::::
 
@@ -279,7 +281,7 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 - {{< bi card-image>}} Transform [proprietary files]{style="color:red;"} (i.e .czi) to [open formats]{style="color:green;"} with no compression (.tif).
 - {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"} along with the images.
 - {{< bi code-square>}} Document (i.e using [coding/scripting software]{style="color:green;"}) all procedures applied to images (resize, background subtraction, etc.). 
-- {{< bi code-square>}} Perform analysis using [coding/scripting software]{style="color:green;"} to ensure reproducibility. [avoid manual analysis]{style="color:red;"}.
+- {{< bi code-square>}} Perform analysis using [coding/scripting software]{style="color:green;"} to ensure reproducibility. [Avoid manual analysis]{style="color:red;"}.
 :::
 ::::
 :::::
@@ -348,7 +350,7 @@ We live in a pandemic of [fraudulent and irreproducible science]{style="color:re
 
 :::: {#second-column}
 :::{style="text-align: left;font-size: 70%"}
-This worrying landscape demands that, as [integral researchers]{style="color:green;"}, we employ good [scientific practices]{style="text-decoration: underline;"} to share data and analysis procedures. 
+This worrying landscape demands that, as [reputable researchers]{style="color:green;"}, we employ good [scientific practices]{style="text-decoration: underline;"} to share data and analysis procedures. 
 :::
 ::::
 :::::
@@ -464,7 +466,7 @@ A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} can contain
 While most scientists may be more comfortable with GUIs, the current research landscape requires the use of [scripts and code]{style="color:green;"} to ensure reproducible research results.
 :::
 
-![](images/Theway.png){fig-alt="A humorous Star Wars-themed meme comparing different programming languages. The image is divided into three sections, each showing a Star Wars character wielding a lightsaber. On the left, Luke Skywalker, with an 'R' programming language logo, holds a blue lightsaber. In the center, Kylo Ren wields a red crossguard lightsaber with the GraphPad logo. On the right, Mace Windu, associated with the Python logo, holds a purple lightsaber. This meme humorously depicts the perceived roles open sofeare has in the research landscape." fig-align="center"}
+![](images/Theway.png){fig-alt="A humorous Star Wars-themed meme comparing different programming languages. The image is divided into three sections, each showing a Star Wars character wielding a lightsaber. On the left, Luke Skywalker, with an 'R' programming language logo, holds a blue lightsaber. In the center, Kylo Ren wields a red crossguard lightsaber with the GraphPad logo. On the right, Mace Windu, associated with the Python logo, holds a purple lightsaber. This meme humorously depicts the perceived roles open software has in the research landscape." fig-align="center"}
 
 ::: callout-tip
 {{< bi code-square >}} Coding should be considered an [essential skill]{style="color:green;"} like other research methods.
@@ -508,11 +510,11 @@ While most scientists may be more comfortable with GUIs, the current research la
 
 - {{< bi wallet-fill>}} Process [Flow cytometry](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/FlowCytometry_Pdgfrb_Processing.qmd) files/data using R [FlowCore](https://bioconductor.org/packages/release/bioc/html/flowCore.html) from [BioConductor](https://bioconductor.org/).
 
-- {{< bi bandaid>}} Analyze [RNS-seq](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) data using R [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) from [BioConductor](https://bioconductor.org/).
+- {{< bi bandaid>}} Analyze [RNA-seq](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) data using R [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) from [BioConductor](https://bioconductor.org/).
 
 - {{< bi bar-chart-line-fill>}} Perform state-of-the-art [statistical modeling](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_5x_Ipsilateral_Gfap_IntDen.qmd) using [brms](https://paulbuerkner.com/brms/).
 
-- And all other things you can imagine...
+- And anything else you can imagine...
 :::
 ::::
 :::::
@@ -640,7 +642,7 @@ The [Results/]{style="color:orange;"} folder contains files generated by the ana
 
 :::: {#second-column}
 ::: {style="font-size: 80%;"}
-There are templates/resources to guide the generation of readme files:
+There are templates and resources to guide the generation of readme files:\
 - [Creating a README file](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)\
 - [Readme.so](https://readme.so/)\
 - [Readme.ai](https://readme-ai.streamlit.app/)
@@ -657,7 +659,7 @@ Generally, a dataset readme file showcases:
 -   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the content and hierarchy of folders and subfolders, together with naming conventions.
 -   {{< bi gear-fill >}} [Methodological information]{style="color:green;"} showcasing methods for data collection/generation, analysis, and experimental conditions.
 
--   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
+-   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproducing research pipelines.
 
 -   {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use.
 :::
