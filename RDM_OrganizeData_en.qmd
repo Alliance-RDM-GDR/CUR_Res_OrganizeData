@@ -3,8 +3,8 @@ title: "Handling and organizing research data"
 subtitle: "A primer for researchers"
 
 author: 
-  - name: Daniel Manrique-Castano, Ph.D
-    email: daniel.manrique-castano@alliancecan.ca
+  - name: FRDR curation team
+    email: curators@frdr-dfdr.ca
     affiliations:
       - name: Digital Research Alliance of Canada
 
@@ -16,7 +16,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Handling and organizing research data - Daniel Manrique-Castano, Ph.D"
+    footer: "Handling and organizing research data - FRDR curation team"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
@@ -26,6 +26,12 @@ format:
     mermaid:
       theme: forest
       mermaid-format: svg
+    revealjs-plugins:
+      - kapsner/audio-slideshow
+    revealjs-args:
+      - audio: true
+      - audioAutoplay: true
+      - audioControls: true
     
 filters:
   - reveal-auto-agenda
@@ -43,12 +49,12 @@ editor: source
 
 # Principles for handling research data
 
-## Make datasets understandable
+## Make datasets understandable {.center} 
 
 :::::{layout-ncol="2" layout-valign="center"}
 ::::{#first-column}
 :::{style="text-align: left;font-size: 80%"}
-Research data comes in many tastes and shapes ([tables]{style="color:orange;"}, [images]{style="color:magenta;"}, [videos]{style="color:red;"}, [text]{style="color:gray;"}).
+Research data comes in many flavors and shapes ([tables]{style="color:orange;"}, [images]{style="color:magenta;"}, [videos]{style="color:red;"}, [text]{style="color:gray;"}).
 
 In all cases, it is essential that the dataset has a clear [structure]{style="color:green;"} and is [understandable]{style="color:green;"} by others.
 :::
@@ -69,8 +75,10 @@ Try to put yourself in the shoes of an [outside observer]{style="color:green;"} 
 
 Use consistent [naming conventions](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) that fairly describe file's content and allow interrelation between files:
 
+:::{style="text-align: left;font-size: 80%"}
 -   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Day_Condition_Marker.tif]{style="color:green;"}
 -   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Counts.csv]{style="color:green;"}
+:::
 
 
 ## 2. Prioritize open file formats{.center}
@@ -85,7 +93,7 @@ Use [proper, open/accessible]{style="color:green;"} [file formats](https://osf.i
 
 ## 3. Provide comprehensive metadata{.center}
 
-Use [comprehensive metadata]{style="color:green;"} (README files and data dictionaries/codebook) to [contextualize]{style="text-decoration: underline;"} and [describe]{style="text-decoration: underline;"} research files.
+Use [comprehensive metadata]{style="color:green;"} (README files and data dictionaries/codebooks) to [contextualize]{style="text-decoration: underline;"} and [describe]{style="text-decoration: underline;"} research files.
 
 :::{style="text-align: center; font-size: 70%"}
 ![Codebook example (https://domstat.med.ucla.edu/)](images/Codebook.jpg){fig-alt="A table displaying a codebook for a dataset, with columns labeled 'Variable Name,' 'Description,' 'Type,' and 'Values or Characteristics.' The table defines variables such as patient ID, gender, procedure date, treatment group, and clinical outcomes, specifying data types (numeric, date, character) and value meanings (e.g., 1=Female, 2=Male). This codebook provides a structured overview of dataset variables for research data management."    fig-align="center" width="500" height="300"}
@@ -102,7 +110,7 @@ These practices ensure [organized, clean, and validated]{style="color:green;"} d
 
 # Handling data tables
 
-## {{< bi file-earmark-spreadsheet>}} Tables are the core of scientific data {.center}
+## {{< bi file-earmark-spreadsheet>}} Tables are the core of research data {.center}
 
 ::: {style="text-align: left;font-size: 70%"}
 Despite being the most common file type (.xls) for recording/storing data, tables are the most [poorly organized and unusable]{style="color:red;"} objects in research.
@@ -138,7 +146,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::
 :::::
 
-## Examples from Crystal Lewis (2024){.center}
+## Examples from [Crystal Lewis (2024)](https://datamgmtinedresearch.com/){.center}
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
@@ -158,7 +166,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::
 :::::
 
-## Examples from Crystal Lewis (2024)
+## Examples from [Crystal Lewis (2024)](https://datamgmtinedresearch.com/){.center}
 
 ::: {style="text-align: center;font-size: 50%"}
 ![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-alt="Two tables comparing implicit and explicit data entry. The left table, labeled 'Not explicit values,' omits repeated school IDs and years, assuming they apply to multiple rows, which can cause confusion in data processing. The right table, labeled 'Explicit values,' explicitly repeats the school ID and year for each row, ensuring clarity and making the dataset more machine-readable. This highlights best practices in research data management for maintaining completeness and reducing ambiguity." fig-align="center" width="500" height="200"}
@@ -191,7 +199,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::
 :::::
 
-## {{< bi file-earmark-spreadsheet>}} Wide and long table formats{.center}
+## {{< bi file-earmark-spreadsheet>}} Wide table formats{.center}
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -202,18 +210,18 @@ Despite being the most common file type (.xls) for recording/storing data, table
 
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 70%"} 
-In a [wide format]{style="color:green;"} table, [each subject]{style="text-decoration: underline;"} occupies a [single row]{style="text-decoration: underline;"} and variables are individual columns:[subject]{style="color:orange;"}, [Id1, Id2]{style="color:red;"}, [Var1, Var2]{style="color:gray;"}, [Time 1, Time2, Time3]{style="color:magenta;"}.
+In a [wide format]{style="color:green;"} table, [each subject]{style="text-decoration: underline;"} occupies a [single row]{style="text-decoration: underline;"} and variables are individual columns: [subject]{style="color:orange;"}, [Id1, Id2]{style="color:red;"}, [Var1, Var2]{style="color:gray;"}, [Time 1, Time2, Time3]{style="color:magenta;"}.
 :::
 
 :::{.callout-tip .smaller}
 Here, columns are [responses or predictors]{style="color:green;"} in a regression. Example:   
 
-[Cells_3D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
+[Cells_7D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
 ::: 
 ::::
 :::::
 
-## {{< bi file-earmark-spreadsheet>}} Wide and long table formats 
+## {{< bi file-earmark-spreadsheet>}} Long table formats {.center}
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -224,13 +232,11 @@ Here, columns are [responses or predictors]{style="color:green;"} in a regressio
 
 :::: {#second-column}
 ::: {style="text-align: left;font-size: 65%"} 
-In a [long format]{style="color:green;"} table, [each subject]{style="text-decoration: underline;"} occupies [various rows]{style="color:green;"} and has associated observations in [different rows:]{style="text-decoration: underline;"}    
-
-[subject]{style="color:orange;"}(repeat), [Id1, Id2 ]{style="color:red;"}(repeat), [Time (1, 2 , 3)]{style="color:magenta;"}.
+In a [long format]{style="color:green;"} table, the observations per [subject]{style="text-decoration: underline;"} occupy [various rows]{style="color:green;"}: [subject]{style="color:orange;"}(repeat), [Time (1, 2 , 3)]{style="color:magenta;"}.
 :::
 
 ::: {.callout-tip .smaller}
-Useful when analyzing [time-lapse data]{style="color:green;"}, grouping different condition variables in a single column. [Example:]{style="text-decoration: underline;"}   
+Useful when analyzing [time-lapse data]{style="color:green;"}. [Example:]{style="text-decoration: underline;"}   
 
 [Cells]{style="color:green;"} ~ [TimePoint (1D, 2D, 3D)]{style="color:magenta;"}. 
 
@@ -241,20 +247,24 @@ Long-format is usually the first choice for data analysis.
 
 ## {{< bi balloon-heart-fill>}} The best of all... {.center}  
 
-You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long to wide table format, or visceversa [tutorial](https://shanghai.hosting.nyu.edu/data/r/reshaping.html).   
-
-::: {style="text-align: center;font-size: 60%"} 
-![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagram illustrating the transformation between long and wide data formats using `pivot_wider()` and `pivot_longer()`. The left table represents long format data, where each row contains a 'country', a 'year', and a corresponding 'metric' value. The right table represents wide format data, where 'year' values are spread across multiple columns (e.g., 'yr1960', 'yr1970', 'yr2010'), each containing the corresponding metric for each country. The `pivot_wider()` function converts long format to wide format, while `pivot_longer()` reverses the process, demonstrating flexible data reshaping in R." fig-align="center" width="600" height="350"}
+::: {style="text-align: left;font-size: 80%"} 
+You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long to wide table format, or visceversa.    
 :::
 
-[R tutorial](https://shanghai.hosting.nyu.edu/data/r/reshaping.html)
+::: {style="text-align: center;font-size: 60%"} 
+![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagram illustrating the transformation between long and wide data formats using `pivot_wider()` and `pivot_longer()`. The left table represents long format data, where each row contains a 'country', a 'year', and a corresponding 'metric' value. The right table represents wide format data, where 'year' values are spread across multiple columns (e.g., 'yr1960', 'yr1970', 'yr2010'), each containing the corresponding metric for each country. The `pivot_wider()` function converts long format to wide format, while `pivot_longer()` reverses the process, demonstrating flexible data reshaping in R." fig-align="center" width="500" height="300"}
+:::
+
+::: {.callout-tip .smaller}
+Check the following [R](https://shanghai.hosting.nyu.edu/data/r/reshaping.html) and [python](https://pandas.pydata.org/docs/getting_started/intro_tutorials/07_reshape_table_layout.html) tutorials.
+:::
 
 ## {{< bi file-earmark-font-fill>}} Provide metadata (README files){.center}    
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
-::: {style="text-align: left;font-size: 100%"} 
-- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by codebooks or data dictionaries [(.txt, .md, .csv)]{style="color:green;"} describing the [variables]{style="color:green;"} of data tables. This can also take the form of a [README file]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describes their [context and content]{style="color:green;"}. 
+::: {style="text-align: left;font-size: 80%"} 
+- Datasets are [unintelligible]{style="color:red;"} if they are not accompanied by a [README file]{style="color:green;"} [(.txt, .md)]{style="color:green;"} that describes their [context and content]{style="color:green;"}. [Codebooks and data dictionaries]{style="text-decoration: underline;"} [(.txt, .md, .csv)]{style="color:green;"} are also useful for describing the [variables]{style="color:green;"} in each data table.  
 :::
 ::::
 
@@ -279,7 +289,7 @@ You can use R (or Python) and [Quarto](https://quarto.org/) to convert from long
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
 - {{< bi card-image>}} Transform [proprietary files]{style="color:red;"} (i.e .czi) to [open formats]{style="color:green;"} with no compression (.tif).
-- {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"} along with the images.
+- {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"}.
 - {{< bi code-square>}} Document (i.e using [coding/scripting software]{style="color:green;"}) all procedures applied to images (resize, background subtraction, etc.). 
 - {{< bi code-square>}} Perform analysis using [coding/scripting software]{style="color:green;"} to ensure reproducibility. [Avoid manual analysis]{style="color:red;"}.
 :::
@@ -315,7 +325,7 @@ Saving .czi images as .tif using FIJI will result in [metadata loss]{style="colo
 :::: {#first-column}
 #### {{< bi gear-fill>}} [Technical]{style="color:gray;"}
 
-Export technical metadata from proprietary images (i.e .czi) as [.txt or .csv]{style="color:green;"} files (This may applied for all images in a batch).  
+Export technical metadata from proprietary images (i.e .czi) as [.txt or .csv]{style="color:green;"} files.  
 
 ::: {style="text-align: center;font-size: 70%"} 
 ![Example of technical metadata in FIJI: *image -> show info*](images/TechnicalMetadata_czi.png){fig-alt="![Screenshot of the metadata viewer displaying technical metadata from a `.czi` microscopy image file. The metadata table includes keys and values such as 'BitsPerPixel' (14), 'DimensionOrder' (XYZCT), and 'PixelType' (uint16). Other metadata details indicate that the image has 4 channels (SizeC), a single time point (SizeT = 1), dimensions of 2752x2208 pixels (SizeX, SizeY), and a single Z-plane (SizeZ = 1). This metadata provides essential information for image processing and analysis in research microscopy." fig-align="center" width="300" height="300"}
@@ -325,7 +335,7 @@ Export technical metadata from proprietary images (i.e .czi) as [.txt or .csv]{s
 :::: {#second-column}
 #### {{< bi file-earmark-pdf-fill>}} [Descriptive]{style="color:orange;"}
 
-Generate descriptive readme files to explain the [provenance and naming conventions]{style="color:green;"} of the images.
+Document the [provenance and naming conventions]{style="color:green;"} in README files.
 
 ::: {style="text-align: center;font-size: 70%"} 
 ![Example of [descriptive metadata](https://github.com/Alliance-RDM-GDR/RDM_OrganizeData/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-alt="Screenshot of descriptive metadata for a dataset related to PDGFR-B+ cell reactivity in a mouse model of cerebral ischemia. The text provides details on the dataset's origin, file naming conventions, experimental conditions, and image processing methods. It describes how images were derived from high-resolution Zenodo deposits and processed using ImageJ and CellProfiler. The document also outlines folder contents, including Ki67/PDGFR-B object detections and outlines, and references an OSF repository for further details." fig-align="center" width="400" height="330"}
@@ -335,7 +345,7 @@ Generate descriptive readme files to explain the [provenance and naming conventi
 
 # Organizing (and sharing) data
 
-## A worrying research landscape
+## A worrying research landscape{.center} 
 
 ::: {style="text-align: left;font-size: 80%"} 
 We live in a pandemic of [fraudulent and irreproducible science]{style="color:red;"}. 
@@ -344,19 +354,19 @@ We live in a pandemic of [fraudulent and irreproducible science]{style="color:re
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
 ::: {style="text-align: left;font-size: 60%"} 
-![Increase in the number of retracted articles in the last three decades](images/Economist_Retractions.png){fig-alt="A chart from The Economist titled 'Pants on fire,' illustrating the cumulative number of retracted biomedical science papers from 1996 to 2023. The graph shows an exponential increase in retractions, reaching over 15,000 by 2023. The data is sourced from Retraction Watch, covering 4,244 assessed journals. The chart highlights growing concerns about scientific integrity and the rise in retracted publications over time." fig-align="left" width="450" height="450"}
+![Increase in the number of retracted articles in the last three decades](images/Economist_Retractions.png){fig-alt="A chart from The Economist titled 'Pants on fire,' illustrating the cumulative number of retracted biomedical science papers from 1996 to 2023. The graph shows an exponential increase in retractions, reaching over 15,000 by 2023. The data is sourced from Retraction Watch, covering 4,244 assessed journals. The chart highlights growing concerns about research integrity and the rise in retracted publications over time." fig-align="left" width="400" height="400"}
 :::
 ::::
 
 :::: {#second-column}
 :::{style="text-align: left;font-size: 70%"}
-This worrying landscape demands that, as [reputable researchers]{style="color:green;"}, we employ good [scientific practices]{style="text-decoration: underline;"} to share data and analysis procedures. 
+This landscape demands that, as [responsible researchers]{style="color:green;"}, we employ good [research practices]{style="text-decoration: underline;"} to share data and analysis procedures. 
 :::
 ::::
 :::::
 
 
-## Define dataset structure {.center} 
+## Define a dataset structure {.center} 
 
 A [structured dataset]{style="color:green;"} is the key to understanding and reusing it.
 
@@ -408,7 +418,7 @@ Overall, ensure that the dataset structure is [logical and consistent]{style="co
 
 ## {{< bi folder-fill >}} Raw data {.center}
 
-A [Data_Raw/]{style="color:orange;"} folder can contain:
+A [Data_Raw]{style="color:orange;"} folder can contain:
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -427,24 +437,24 @@ A [Data_Raw/]{style="color:orange;"} folder can contain:
 
 ## Raw Data - metadata {.center}
 
-Include [metadata/]{style="color:orange;"} that allows the file contents to be understood and reused:
+Include [metadata]{style="color:orange;"} that allows the file contents to be understood and reused:
 
 - {{< bi file-earmark-font-fill >}} Methodological and technical details.
 
-- {{< bi file-earmark-font-fill >}} Codebooks / data dictionaries that explain variables and units. They can be [.txt](https://osf.io/9n3gh) or [.csv-xlxs](https://osf.io/925sh) files.
+- {{< bi file-earmark-font-fill >}} Codebooks / data dictionaries that explain variables and units. They can be [.txt](https://osf.io/9n3gh) or [.csv, xlxs](https://osf.io/925sh) files.
 
 - {{< bi filetype-tiff >}} Instrument and acquisition parameters for images.
 
 ## {{< bi folder-fill >}} Analysis (processed) data {.center}
 
-A [Data_Analysis/]{style="color:orange;"} folder contains [processed files]{style="color:green;"} to generate the research results.
+A [Data_Analysis]{style="color:orange;"} folder contains [processed files]{style="color:green;"} to generate the research results.
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 
-- Metadata similar to raw data.
+- Provide metadata (as done for raw data).
 
-- [Data_Appendix]{style="color:green;"} files showing basic descriptive statistics or data distributions.
+- (Optional) Include [Data_Appendix]{style="color:green;"} files showing basic descriptive statistics or data distributions.
 
 ::::
 
@@ -457,13 +467,13 @@ A [Data_Analysis/]{style="color:orange;"} folder contains [processed files]{styl
 
 ## {{< bi folder-fill >}} Intermediate data (Optional){.center}
 
-A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} can contain intermediate processed data, or pre-processed files as part of an analysis pipeline. For example, image 'masks' and machine learning classifiers that are used to further process images.
+A [Data_Intermediate]{style="color:orange;"} folder can contain intermediate or pre-processed files (i.e. image 'masks' or machine learning classifiers) as part of an analysis pipeline. 
 
 
 ## {{< bi code-square >}} Scripting is the way 
 
 ::: {style="text-align: left;font-size: 80%"}
-While most scientists may be more comfortable with GUIs, the current research landscape requires the use of [scripts and code]{style="color:green;"} to ensure reproducible research results.
+While most researchers may be more comfortable with GUIs, the current research landscape requires the use of [scripts and code]{style="color:green;"} to ensure reproducible research results.
 :::
 
 ![](images/Theway.png){fig-alt="A humorous Star Wars-themed meme comparing different programming languages. The image is divided into three sections, each showing a Star Wars character wielding a lightsaber. On the left, Luke Skywalker, with an 'R' programming language logo, holds a blue lightsaber. In the center, Kylo Ren wields a red crossguard lightsaber with the GraphPad logo. On the right, Mace Windu, associated with the Python logo, holds a purple lightsaber. This meme humorously depicts the perceived roles open software has in the research landscape." fig-align="center"}
@@ -529,14 +539,14 @@ While most scientists may be more comfortable with GUIs, the current research la
 ::::
 
 :::: {#second-column}
-:::{style="text-align: left;font-size: 75%"}
-With [GitHub]{style="color:magenta;"} {{< bi github>}}  or [GitLab]{style="color:magenta;"} {{< bi gitlab>}} you can:
+:::{style="text-align: left;font-size: 70%"}
+With [GitHub](https://github.com/) {{< bi github>}}  or [GitLab](https://about.gitlab.com/) {{< bi gitlab>}} you can:
 
 - {{< bi database-fill-check>}} [Store]{style="color:green;"} your code/data in a secure place and [share it]{style="color:green;"} with collaborators and the public.
 
 - {{< bi subtract>}} Keep a [history of changes]{style="color:green;"} and version your code (v 1.0, 1.2, 2.0).
 
-- {{< bi folder-plus>}} [Link/render]{style="color:green;"} your code in different platforms (i.e [Open Science Framework Repository](https://osf.io/)). 
+- {{< bi folder-plus>}} [Link/render]{style="color:green;"} your code in different platforms (i.e [OSF](https://osf.io/)) or [Borealis](https://borealisdata.ca/). 
 
 - {{< bi clipboard2-pulse-fill>}} [Support other researchers]{style="color:green;"} and contribute to a culture of [open and reproducible science]{style="color:green;"}.
 
@@ -604,25 +614,26 @@ These scripts import and process the [analysis data]{style="color:orange;"}.
 
 ## {{< bi code-slash >}} A master script? {.center}
 
-The [Scripts/]{style="color:orange;"} folder can also contain a [master script]{style="color:green;"} that executes all other scripts, creating a fully automated pipeline.
+The [Scripts]{style="color:orange;"} folder can also contain a [master script]{style="color:green;"} that executes all other scripts, creating a fully automated pipeline.
 
 
 ## {{< bi folder-fill >}} The Results folder {.center}
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
-
-The [Results/]{style="color:orange;"} folder contains files generated by the analysis scripts in the form of:
+::: {style="text-align: left;font-size: 90%"}
+The [Results]{style="color:orange;"} folder contains files generated by the analysis scripts in the form of:
 
 -   {{< bi card-image >}} Images
 -   {{< bi file-bar-graph-fill >}} Figures
 -   {{< bi table >}} Tables
 -   {{< bi calculator-fill >}} Statistical models
+:::
 ::::
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Folder tree](images/output.png){fig-alt="A screenshot of a structured directory containing scientific figures/plots" width="100%"}
+![Folder tree](images/output.png){fig-alt="A screenshot of a structured directory containing research figures/plots" width="100%"}
 :::
 ::::
 :::::
@@ -714,10 +725,12 @@ Visit this [resource](https://github.com/Alliance-RDM-GDR/RDM_DepositingData) fo
 ::::
 :::::
 
+::: {style="text-align: left;font-size: 80%"}
 ### Support Services
 
 Contact us to ensure that your data are well prepared and can be effectively shared with the research community.
 
 -   Email: rdm-gdr\@alliancecan.ca
--   https://www.frdr-dfdr.ca/repo/
+-   [FRDR website](https://www.frdr-dfdr.ca/repo/)
+:::
 

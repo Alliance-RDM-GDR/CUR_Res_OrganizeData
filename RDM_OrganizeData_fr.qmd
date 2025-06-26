@@ -3,8 +3,8 @@ title: "Traitement et organisation des données de recherche"
 subtitle: "un guide à l'usage des chercheurs"
 
 author: 
-  - name: Daniel Manrique-Castano, Ph.D
-    email: daniel.manrique-castano@alliancecan.ca
+  - name: L'équipe de curation du DFDR
+    email: curators@frdr-dfdr.ca
     affiliations:
       - name: Digital Research Alliance of Canada
 
@@ -15,7 +15,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Traitement et organisation des données de recherche - Daniel Manrique-Castano, Ph.D"
+    footer: "Traitement et organisation des données de recherche - L'équipe de curation du DFDR"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
@@ -25,6 +25,13 @@ format:
     mermaid:
       theme: forest
       mermaid-format: svg
+    revealjs-plugins:
+      - kapsner/audio-slideshow
+    revealjs-args:
+      - audio: true
+      - audioAutoplay: true
+      - audioControls: true
+    
     
 filters:
   - reveal-auto-agenda
@@ -42,12 +49,12 @@ editor: source
 
 # Principes pour la gestion des données de recherche
 
-## Rendre les ensembles de données compréhensibles
+## Rendre les ensembles de données compréhensibles {.center} 
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
 :::{style="text-align: left;font-size: 70%"}
-Les données de recherche existent sous de nombreuses formes et formats ([tableaux]{style="color:orange;"}, [images]{style="color:magenta;"}, [vidéos]{style="color:red;"}, [texte]{style="color:gray;"}).
+Les données de recherche existent sous de nombreuses formats ([tableaux]{style="color:orange;"}, [images]{style="color:magenta;"}, [vidéos]{style="color:red;"}, [texte]{style="color:gray;"}).
 
 Dans tous les cas, il est essentiel que l’ensemble de données ait une [structure]{style="color:green;"} claire et soit [compréhensible]{style="color:green;"} par d'autres.
 :::
@@ -68,12 +75,14 @@ Essayez de vous mettre à la place d’un [observateur externe]{style="color:gre
 
 Utilisez des [conventions de nommage](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions) cohérentes qui décrivent fidèlement le contenu des fichiers et permettent l’interrelation entre eux :
 
--   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Jour_Condition_Marqueur.tif]{style="color:green;"}
+:::{style="text-align: left;font-size: 80%"}
+-   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_Souris_Jour_Condition_Marqueur.tif]{style="color:green;"}
 -   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Comptes.csv]{style="color:green;"}
+:::
 
 ## 2. Prioriser formats de fichiers ouverts{.center}
 
-Utilisez des [formats de fichiers appropriés, ouverts et accessibles]{style="color:green;"} [(lien)](https://osf.io/ena5p) pour améliorer l’accessibilité :
+Utilisez des formats de [fichiers appropriés et ouverts](https://osf.io/ena5p) pour améliorer l’accessibilité :
 
 -   {{< bi card-image>}} [.tif]{style="color:green;"} pour les images (préserve les métadonnées).
 -   {{< bi file-earmark-spreadsheet>}} [.csv]{style="color:green;"} pour les tableaux (format non propriétaire).
@@ -81,7 +90,7 @@ Utilisez des [formats de fichiers appropriés, ouverts et accessibles]{style="co
 -   {{< bi file-earmark-pdf-fill>}} [.txt ou .pdf]{style="color:green;"} pour la documentation (format non propriétaire).
 
 
-## 3. Fournir des métadonnées complètes{.center}
+## 3. Fournir des métadonnées complètes{.center} 
 
 Utilisez des [métadonnées détaillées]{style="color:green;"} (fichiers README et dictionnaires de données/codebook) pour [contextualiser]{style="text-decoration: underline;"} et [décrire]{style="text-decoration: underline;"} les fichiers de recherche.
 
@@ -102,7 +111,7 @@ Ces pratiques garantissent des ensembles de données [organisés, propres et val
 
 # Gestion des tableaux de données
 
-## {{< bi file-earmark-spreadsheet>}} Les tableaux sont au cœur des données scientifiques {.center}
+## {{< bi file-earmark-spreadsheet>}} Les tableaux sont au cœur des données de recherche {.center}
 
 ::: {style="text-align: left;font-size: 70%"}
 Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistrement et le stockage des données, les tableaux sont les objets les plus [mal organisés et inutilisables]{style="color:red;"} en recherche.
@@ -138,7 +147,7 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::
 :::::
 
-## Exemples de Crystal Lewis (2024){.center}
+## Exemples de [Crystal Lewis (2024)](https://datamgmtinedresearch.com/){.center}
 
 ::::: {layout-ncol="2"}
 :::: {#first-column}
@@ -159,7 +168,7 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::
 :::::
 
-## Exemples de Crystal Lewis (2024)
+## Exemples de [Crystal Lewis (2024)](https://datamgmtinedresearch.com/){.center}
 
 ::: {style="text-align: center;font-size: 50%"}
 ![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-alt="Deux tableaux comparant l'utilisation de valeurs explicites et implicites. Le tableau de gauche, intitulé 'Valeurs non explicites,' omet la répétition des identifiants d'école et des années, supposant qu'ils s'appliquent à plusieurs lignes, ce qui peut causer des erreurs lors du traitement des données. Le tableau de droite, intitulé 'Valeurs explicites,' répète ces informations pour chaque ligne, garantissant une clarté accrue et une meilleure lisibilité pour l'analyse." fig-align="center" width="500" height="200"}
@@ -192,7 +201,7 @@ Bien qu'ils soient le type de fichier le plus courant (.xls) pour l'enregistreme
 ::::
 :::::
 
-## {{< bi file-earmark-spreadsheet>}} Formats de tableaux larges et longs{.center}
+## {{< bi file-earmark-spreadsheet>}} Formats de tableaux larges{.center}
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -209,12 +218,12 @@ Dans un tableau au [format large]{style="color:green;"}, [chaque sujet]{style="t
 :::{.callout-tip .smaller}
 Ici, les colonnes représentent des [réponses ou prédicteurs]{style="color:green;"} dans une régression. Exemple :   
 
-[Cells_3D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
+[Cells_7D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
 ::: 
 ::::
 :::::
 
-## {{< bi file-earmark-spreadsheet>}} Formats de tableaux larges et longs 
+## {{< bi file-earmark-spreadsheet>}} Formats de tableaux longs 
 
 ::::: {layout-ncol="2" layout-valign="center"}
 :::: {#first-column}
@@ -242,12 +251,17 @@ Le format long est généralement privilégié pour l’analyse des données.
 
 ## {{< bi balloon-heart-fill>}} Le meilleur dans tout ça... {.center}  
 
-Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convertir un tableau du format long au format large, et inversement. [Tutoriel](https://shanghai.hosting.nyu.edu/data/r/reshaping.html).   
-
-::: {style="text-align: center;font-size: 60%"} 
-![Conversion format long à large (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagramme illustrant la transformation entre les formats de données long et large en utilisant `pivot_wider()` et `pivot_longer()`. Le tableau de gauche représente des données au format long, où chaque ligne contient un « pays », une “année” et une valeur « métrique » correspondante. Le tableau de droite représente des données au format large, où les valeurs de l'année sont réparties sur plusieurs colonnes (par exemple, “yr1960”, “yr1970”, “yr2010”), chacune contenant la valeur métrique correspondante pour chaque pays. La fonction `pivot_wider()` convertit le format long en format large, tandis que `pivot_longer()` inverse le processus, démontrant ainsi la flexibilité de la mise en forme des données dans R." fig-align="center" width="600" height="350"}
+::: {style="text-align: left;font-size: 80%"} 
+Vous pouvez utiliser R (ou Python) et [Quarto](https://quarto.org/) pour convertir un tableau du format long au format large, et inversement.  
 :::
 
+::: {style="text-align: center;font-size: 60%"} 
+![Conversion format long à large (https://tavareshugo.github.io/)](images/LongToWide.png){fig-alt="Diagramme illustrant la transformation entre les formats de données long et large en utilisant `pivot_wider()` et `pivot_longer()`. Le tableau de gauche représente des données au format long, où chaque ligne contient un « pays », une “année” et une valeur « métrique » correspondante. Le tableau de droite représente des données au format large, où les valeurs de l'année sont réparties sur plusieurs colonnes (par exemple, “yr1960”, “yr1970”, “yr2010”), chacune contenant la valeur métrique correspondante pour chaque pays. La fonction `pivot_wider()` convertit le format long en format large, tandis que `pivot_longer()` inverse le processus, démontrant ainsi la flexibilité de la mise en forme des données dans R." fig-align="center" width="400" height="300"}
+:::
+
+::: {.callout-tip .smaller}
+Consultez les [tutoriels R]((https://shanghai.hosting.nyu.edu/data/r/reshaping.html)) et [python](https://pandas.pydata.org/docs/getting_started/intro_tutorials/07_reshape_table_layout.html).
+:::
 
 ## {{< bi file-earmark-font-fill>}} Fournir des métadonnées (fichiers README){.center}    
 
@@ -337,7 +351,7 @@ Générez des fichiers README descriptifs pour expliquer la [provenance et les c
 ## Un paysage de recherche préoccupant
 
 ::: {style="text-align: left;font-size: 80%"} 
-Nous vivons une pandémie de [science frauduleuse et irréproducible]{style="color:red;"}. 
+Nous vivons une pandémie de [recherche frauduleuse et irréproducible]{style="color:red;"}. 
 :::
 
 ::::: {layout-ncol="2" layout-valign="center"}
@@ -349,7 +363,7 @@ Nous vivons une pandémie de [science frauduleuse et irréproducible]{style="col
 
 :::: {#second-column}
 :::{style="text-align: left;font-size: 70%"}
-Ce paysage préoccupant exige que, en tant que [chercheurs intègres]{style="color:green;"}, nous appliquions de bonnes [pratiques scientifiques]{style="text-decoration: underline;"} pour partager les données et les procédures d’analyse. 
+Ce paysage préoccupant exige que, en tant que [chercheurs responsables]{style="color:green;"}, nous appliquions de bonnes [pratiques de recherche]{style="text-decoration: underline;"} pour partager les données et les procédures d’analyse. 
 :::
 ::::
 :::::
@@ -432,7 +446,7 @@ Incluez des [métadonnées/]{style="color:orange;"} permettant de comprendre et 
 
 - {{< bi file-earmark-font-fill >}} Détails méthodologiques et techniques.
 
-- {{< bi file-earmark-font-fill >}} Codebooks / dictionnaires de données expliquant les variables et unités. Ils peuvent être des fichiers [.txt](https://osf.io/9n3gh) ou [.csv-xlxs](https://osf.io/925sh).
+- {{< bi file-earmark-font-fill >}} Codebooks / dictionnaires de données expliquant les variables et unités. Ils peuvent être des fichiers [.txt](https://osf.io/9n3gh) ou [.csv, xlxs](https://osf.io/925sh).
 
 - {{< bi filetype-tiff >}} Paramètres d’instrumentation et d’acquisition pour les images.
 
@@ -464,7 +478,7 @@ Un dossier [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} pe
 ## {{< bi code-square >}} Le script est la voie à suivre 
 
 ::: {style="text-align: left;font-size: 80%"}
-Bien que la plupart des scientifiques soient plus à l’aise avec les interfaces graphiques (GUI), le paysage actuel de la recherche exige l'utilisation de [scripts et de code]{style="color:green;"} pour garantir la reproductibilité des résultats scientifiques.
+Bien que la plupart des chercheurs soient plus à l’aise avec les interfaces graphiques (GUI), le paysage actuel de la recherche exige l'utilisation de [scripts et de code]{style="color:green;"} pour garantir la reproductibilité des résultats de recherche.
 :::
 
 ![](images/Theway.png){fig-alt="Un mème humoristique sur le thème de la Guerre des étoiles comparant différents langages de programmation. L'image est divisée en trois sections, chacune montrant un personnage de Star Wars brandissant un sabre laser. À gauche, Luke Skywalker, avec un logo de langage de programmation « R », tient un sabre laser bleu. Au centre, Kylo Ren brandit un sabre laser rouge à garde transversale portant le logo GraphPad. À droite, Mace Windu, associé au logo Python, tient un sabre laser violet. Ce mème dépeint avec humour les rôles perçus des logiciels libres dans le paysage de la recherche." fig-align="center"}
@@ -625,7 +639,7 @@ Le dossier [Results/]{style="color:orange;"} contient les fichiers générés pa
 
 :::: {#Second-column}
 ::: {style="text-align: center;font-size: 50%"}
-![Arborescence des dossiers](images/output.png){fig-alt="Une capture d'écran d'un répertoire structuré contenant des figures/tracés scientifiques" width="100%"}
+![Arborescence des dossiers](images/output.png){fig-alt="Une capture d'écran d'un répertoire structuré contenant des figures/tracés de recherche" width="100%"}
 :::
 ::::
 :::::
@@ -705,7 +719,7 @@ Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_DepositingDa
 :::: {#first-column}
 ### Matériel de soutien
 
--   [Documentation FRDR](https://www.frdr-dfdr.ca/docs/fr/depot_de_donnees/)
+-   [Documentation DFDR](https://www.frdr-dfdr.ca/docs/fr/depot_de_donnees/)
 -   [Ressources de formation](https://alliancecan.ca/fr/services/gestion-des-donnees-de-recherche/apprentissage-et-formation/ressources-de-formation) de l'Alliance
 -   [RDMkit](https://rdmkit.elixir-europe.org/sharing)
 ::::
@@ -719,9 +733,9 @@ Consultez cette [ressource](https://github.com/Alliance-RDM-GDR/RDM_DepositingDa
 
 ### Services de soutien
 
-Contactez-nous pour vous assurer que vos données sont bien préparées et peuvent être efficacement partagées avec la communauté scientifique.
+Contactez-nous pour vous assurer que vos données sont bien préparées et peuvent être efficacement partagées avec la communauté.
 
 -   Email : rdm-gdr\@alliancecan.ca
--   https://www.frdr-dfdr.ca/repo/
+-   [Site web du DFDR](https://www.frdr-dfdr.ca/repo/)
 
 
