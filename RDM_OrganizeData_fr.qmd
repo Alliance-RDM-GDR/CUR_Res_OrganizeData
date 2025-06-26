@@ -29,7 +29,7 @@ format:
       - kapsner/audio-slideshow
     revealjs-args:
       - audio: true
-      - audioAutoplay: true
+      - audioAutoplay: false
       - audioControls: true
     
     
