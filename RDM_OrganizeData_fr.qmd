@@ -3,10 +3,10 @@ title: "Traitement et organisation des données de recherche"
 subtitle: "un guide à l'usage des chercheurs"
 
 author: 
-  - name: L'équipe de curation du DFDR
+  - name: Équipe de curation des données du DFDR
     email: curators@frdr-dfdr.ca
     affiliations:
-      - name: Digital Research Alliance of Canada
+      - name: Alliance de Recherche Numérique du Canada
 
 format: 
   html:
@@ -15,7 +15,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Traitement et organisation des données de recherche - L'équipe de curation du DFDR"
+    footer: "Traitement et organisation des données de recherche - Équipe de curation des données du DFDR"
     logo: "images/alliance_logo.png"
     theme: white
     transition: fade
