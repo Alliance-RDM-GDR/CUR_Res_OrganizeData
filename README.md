@@ -4,7 +4,7 @@
 
 This repository contains the source code for the presentation on handling and organizing research data.
 
-The user can view the presentations in [English](https://alliance-rdm-gdr.github.io/RDM_OrganizeData/CUR_Res_OrganizeData_en.html#/title-slide) or [French](https://alliance-rdm-gdr.github.io/CUR_Res_OrganizeData/RDM_OrganizeData_fr.html#/title-slide).
+The user can view the presentations in [English](https://alliance-rdm-gdr.github.io/CUR_Res_OrganizeData/RDM_OrganizeData_en.html#/title-slide) or [French](https://alliance-rdm-gdr.github.io/CUR_Res_OrganizeData/RDM_OrganizeData_fr.html#/title-slide).
 
 For more presentations developed by the curation team of the Federated Research Data Repository [(FRDR)](https://www.frdr-dfdr.ca/), please visit our [presentations repository](https://github.com/Alliance-RDM-GDR/CUR_Res_Presentations).
 
