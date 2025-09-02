@@ -6,7 +6,7 @@ author:
   - name: Équipe de curation des données du DFDR
     email: curators@frdr-dfdr.ca
     affiliations:
-      - name: Alliance de Recherche Numérique du Canada
+      - name: Alliance de recherche numérique du Canada
 
 format: 
   html:
